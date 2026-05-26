@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MetalScope India — Pre-Engineered Buildings, Bridges & Rail Infrastructure</title>
+<meta name="description" content="MetalScope India delivers integrated structural engineering solutions — Pre-Engineered Buildings, Bridges, Rail Coaches, Modular Buildings. 20+ years, 5000+ projects delivered.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">M</div>
+      <div class="nav-logo-text">
+        <span>MetalScope</span>
+        <span>India · Since 1984</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About Us <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown">
+          <a href="about.html">Who We Are</a>
+          <a href="mission-vision.html">Mission &amp; Vision</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="verticals.html" class="nav-link">Business Vertical <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown">
+          <a href="peb.html">Pre-Engineered Buildings</a>
+          <a href="structural-steel.html">Structural Steel</a>
+          <a href="bridges.html">Bridges &amp; Infrastructure</a>
+          <a href="railcar.html">Railcar &amp; Rolling Stock</a>
+          <a href="steel-doors.html">Steel Doors</a>
+          <a href="epc.html">EPC Projects</a>
+          <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="excellence.html" class="nav-link">Excellence</a></li>
+      <li class="nav-item"><a href="media.html" class="nav-link">Media</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-red nav-cta btn-arrow">Get a Quote</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="nav-mobile-overlay" id="navMobileOverlay">
+  <button id="navMobileClose" style="position:absolute;top:24px;right:24px;width:40px;height:40px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/></svg>
+  </button>
+  <ul>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home</a></li>
+    <li class="mobile-nav-item">
+      <button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">
+        About Us <span class="mobile-caret" style="transition:transform 0.3s;">▾</span>
+      </button>
+      <div class="mobile-sub-links">
+        <a href="about.html">Who We Are</a>
+        <a href="mission-vision.html">Mission &amp; Vision</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item">
+      <button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">
+        Business Vertical <span class="mobile-caret" style="transition:transform 0.3s;">▾</span>
+      </button>
+      <div class="mobile-sub-links">
+        <a href="peb.html">Pre-Engineered Buildings</a>
+        <a href="structural-steel.html">Structural Steel</a>
+        <a href="bridges.html">Bridges &amp; Infrastructure</a>
+        <a href="railcar.html">Railcar &amp; Rolling Stock</a>
+        <a href="steel-doors.html">Steel Doors</a>
+        <a href="epc.html">EPC Projects</a>
+        <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="projects.html">Projects</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="excellence.html">Excellence</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="media.html">Media</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="contact.html#quote" class="btn btn-red" style="margin-top:32px;align-self:flex-start;">Get a Quote →</a>
+</div>
+
+<!-- ═══════════ HERO VIDEO ═══════════ -->
+<section class="hero-video">
+  <img class="hero-bg-img" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1800&q=80" alt="MetalScope steel manufacturing facility" loading="eager">
+  <div class="hero-video-overlay"></div>
+  <div class="container hero-content">
+    <div class="hero-tag">India's Trusted Structural Engineering Partner</div>
+    <h1 class="display-xl hero-h1">BUILT TO<br><span class="red">DELIVER</span><br>PROJECTS</h1>
+    <p class="hero-sub">One Stop Solution for All Your Structural Needs</p>
+    <div class="hero-btns">
+      <a href="verticals.html" class="btn btn-red btn-arrow">Explore Verticals</a>
+      <a href="contact.html#quote" class="btn btn-outline-white">Get a Quote</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="hero-scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════════ NUMBERS SECTION ═══════════ -->
+<section class="numbers-section section-pad">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="numbers-left reveal">
+        <p class="sub-title">Built To Deliver Projects</p>
+        <h2 class="display-md">ONE STOP SOLUTION<br>FOR ALL YOUR<br><span class="accent-red">STRUCTURAL NEEDS</span></h2>
+        <p style="margin-top:24px;">MetalScope delivers integrated structural engineering and infrastructure solutions with precision, scale, and reliability. With over two decades of expertise, state-of-the-art manufacturing facilities, and a strong execution network, the company specializes in delivering end-to-end solutions across pre-engineered buildings, infrastructure projects, rail coaches, and modular construction. From concept design and engineering to production, dispatch, and site erection, MetalScope ensures seamless coordination, quality-driven execution, and timely project delivery, making it a trusted one-stop solution provider for diverse industrial and infrastructure needs.</p>
+        <div style="margin-top:32px;">
+          <a href="about.html" class="btn btn-outline-red btn-arrow">Who We Are</a>
+        </div>
+      </div>
+      <div class="numbers-right">
+        <div class="stat-item">
+          <div class="stat-number" data-target="20" data-suffix="+">0+</div>
+          <div class="stat-label">Field Expertise of 20+ Years &amp; Growing</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="2" data-suffix="">0</div>
+          <div class="stat-label">State of Art Factories &amp; Expanding &amp; Counting</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="20" data-suffix="+">0+</div>
+          <div class="stat-label">Connecting Nation with 20+ Bridges &amp; More</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="7000" data-suffix="+">0+</div>
+          <div class="stat-label">Delivered More Than 7000+ Coaches &amp; More</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="5000" data-suffix="+">0+</div>
+          <div class="stat-label">Projects Delivered 5000+ &amp; Counting</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CORE BUSINESS VERTICALS ═══════════ -->
+<section class="verticals-section section-pad">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">Home Page</div>
+      <h2 class="display-md">OUR CORE <span class="accent-red">BUSINESS VERTICALS</span></h2>
+      <p>Four integrated engineering capabilities powering India's industrial and infrastructure growth.</p>
+    </div>
+    <div class="flip-cards-grid">
+
+      <!-- PEB -->
+      <div class="flip-card reveal reveal-delay-1">
+        <div class="flip-card-inner">
+          <div class="flip-front">
+            <div class="flip-front-icon">
+              <svg viewBox="0 0 100 80" fill="none" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="10,70 10,30 50,5 90,30 90,70"/>
+                <line x1="10" y1="70" x2="90" y2="70"/>
+                <line x1="30" y1="70" x2="30" y2="45"/>
+                <line x1="50" y1="70" x2="50" y2="45"/>
+                <line x1="30" y1="45" x2="50" y2="45"/>
+                <line x1="62" y1="70" x2="62" y2="50"/>
+                <line x1="78" y1="70" x2="78" y2="50"/>
+                <line x1="62" y1="50" x2="78" y2="50"/>
+                <line x1="10" y1="70" x2="10" y2="75"/>
+                <line x1="90" y1="70" x2="90" y2="75"/>
+                <line x1="10" y1="75" x2="90" y2="75"/>
+              </svg>
+            </div>
+            <h3>Pre-Engineered Buildings</h3>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">Factories, warehouses, hangars &amp; cold storage as complete turnkey kits.</p>
+            <div class="hover-hint">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4"/></svg>
+              Hover to explore
+            </div>
+          </div>
+          <div class="flip-back">
+            <h3>Pre-Engineered Buildings</h3>
+            <div class="flip-back-content">
+              <div class="flip-back-sector">
+                <h4>Industrial Sector</h4>
+                <ul>
+                  <li>Automotive Industry</li><li>Agriculture</li><li>Battery Mfg</li><li>Capital Goods</li><li>Construction</li><li>Electronics</li><li>Equipment &amp; Machinery</li><li>Factory Sheds</li><li>FMCG</li><li>Food &amp; Beverage</li><li>Heavy Equipment</li><li>Home Appliances</li><li>Mezzanine</li><li>Oil &amp; Gas</li><li>Pharma</li><li>Poultries &amp; Farms</li><li>Power &amp; Energy</li><li>Semiconductors</li><li>SMCG</li><li>SEZ Clusters</li><li>Tire &amp; Rubber</li><li>Workshops</li>
+                </ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Warehouse Sector</h4>
+                <ul><li>Cold Storage</li><li>Data Centers</li><li>Distribution Centers</li><li>Logistics Parks</li><li>Warehouse</li></ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Commercial Sector</h4>
+                <ul><li>Data Centers</li><li>Exhibition Halls</li><li>High Rise</li><li>Showrooms</li><li>Super Markets</li></ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Transportation</h4>
+                <ul><li>Aircraft Hangers</li><li>Defense &amp; Aerospace</li><li>Metro Stations</li><li>Parking Sheds</li><li>Railway Locomotive Yard</li></ul>
+              </div>
+            </div>
+            <a href="peb.html" class="btn-know-more">Know More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infrastructure -->
+      <div class="flip-card reveal reveal-delay-2">
+        <div class="flip-card-inner">
+          <div class="flip-front">
+            <div class="flip-front-icon">
+              <svg viewBox="0 0 100 80" fill="none" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5,65 Q30,20 50,20 Q70,20 95,65"/>
+                <line x1="5" y1="65" x2="95" y2="65"/>
+                <line x1="20" y1="65" x2="20" y2="75"/>
+                <line x1="80" y1="65" x2="80" y2="75"/>
+                <line x1="35" y1="65" x2="35" y2="40"/>
+                <line x1="50" y1="65" x2="50" y2="20"/>
+                <line x1="65" y1="65" x2="65" y2="40"/>
+                <line x1="35" y1="40" x2="65" y2="40"/>
+                <circle cx="50" cy="35" r="8" stroke="#1C3872"/>
+              </svg>
+            </div>
+            <h3>Infrastructure Projects</h3>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">RDSO-approved bridges, ROB, FOB and large-span connectivity solutions.</p>
+            <div class="hover-hint">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4"/></svg>
+              Hover to explore
+            </div>
+          </div>
+          <div class="flip-back">
+            <h3>Infrastructure Projects</h3>
+            <div class="flip-back-content">
+              <div class="flip-back-sector">
+                <h4>Bridge Types</h4>
+                <ul>
+                  <li>Road Over Bridge (ROB)</li><li>Road Under Bridge (RUB)</li><li>Pedestrian Bridge / FOB</li><li>Flyover</li><li>Network Marine Arch Bridge</li>
+                </ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Certifications</h4>
+                <ul><li>RDSO Approved</li><li>RITES Certified</li><li>BHEL &amp; NTPC</li><li>Mfr. Eng. Services</li></ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Track Record</h4>
+                <ul><li>20+ Bridges Delivered</li><li>Pan India Presence</li><li>28 States Logistics</li></ul>
+              </div>
+            </div>
+            <a href="bridges.html" class="btn-know-more">Know More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rail Coaches -->
+      <div class="flip-card reveal reveal-delay-3">
+        <div class="flip-card-inner">
+          <div class="flip-front">
+            <div class="flip-front-icon">
+              <svg viewBox="0 0 100 75" fill="none" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="8" y="20" width="84" height="36" rx="8"/>
+                <circle cx="25" cy="62" r="8"/>
+                <circle cx="75" cy="62" r="8"/>
+                <line x1="8" y1="56" x2="92" y2="56"/>
+                <line x1="50" y1="20" x2="50" y2="56"/>
+                <rect x="18" y="28" width="18" height="14" rx="2" stroke="#1C3872"/>
+                <rect x="64" y="28" width="18" height="14" rx="2" stroke="#1C3872"/>
+                <line x1="5" y1="56" x2="95" y2="56"/>
+              </svg>
+            </div>
+            <h3>Rail Coaches</h3>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">RDSO-approved coach shells, underframes &amp; rolling stock assemblies.</p>
+            <div class="hover-hint">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4"/></svg>
+              Hover to explore
+            </div>
+          </div>
+          <div class="flip-back">
+            <h3>Rail Coach Components</h3>
+            <div class="flip-back-content">
+              <div class="flip-back-sector">
+                <h4>Coach Types Delivered</h4>
+                <ul>
+                  <li>2000+ MEMU Coaches</li><li>2000+ EMU Coaches</li><li>2000+ DMU Coaches</li><li>520 Vande Bharat Parts</li><li>3500+ LHB Coaches</li>
+                </ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Total Delivered</h4>
+                <ul><li>5950+ Coach Components</li><li>All Variants Covered</li></ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Certifications</h4>
+                <ul><li>EN/ISO 3834-2:2005</li><li>EN/ISO 15085-2</li><li>RDSO Approved</li></ul>
+              </div>
+            </div>
+            <a href="railcar.html" class="btn-know-more">Know More →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modular Buildings -->
+      <div class="flip-card reveal reveal-delay-4">
+        <div class="flip-card-inner">
+          <div class="flip-front">
+            <div class="flip-front-icon">
+              <svg viewBox="0 0 90 80" fill="none" stroke="#C8102E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="10" y="10" width="30" height="28" rx="2"/>
+                <rect x="10" y="46" width="30" height="28" rx="2"/>
+                <rect x="48" y="10" width="30" height="28" rx="2"/>
+                <rect x="48" y="46" width="30" height="28" rx="2"/>
+                <line x1="10" y1="24" x2="40" y2="24" stroke="#1C3872"/>
+                <line x1="48" y1="24" x2="78" y2="24" stroke="#1C3872"/>
+                <line x1="10" y1="60" x2="40" y2="60" stroke="#1C3872"/>
+                <line x1="48" y1="60" x2="78" y2="60" stroke="#1C3872"/>
+              </svg>
+            </div>
+            <h3>Modular Buildings</h3>
+            <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.5;">Interlocked modular systems for homes, data centres &amp; composite structures.</p>
+            <div class="hover-hint">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h8M7 3l4 4-4 4"/></svg>
+              Hover to explore
+            </div>
+          </div>
+          <div class="flip-back">
+            <h3>Modular Buildings</h3>
+            <div class="flip-back-content">
+              <div class="flip-back-sector">
+                <h4>Product Types</h4>
+                <ul>
+                  <li>Assembling at Site</li><li>Interlocked Cabinets</li><li>Modular Homes</li><li>Modular Buildings</li><li>High Rise Buildings</li><li>Data Centres</li><li>Composite Structures</li>
+                </ul>
+              </div>
+              <div class="flip-back-sector">
+                <h4>Key Benefits</h4>
+                <ul><li>Factory-Precision Build</li><li>Faster Installation</li><li>Lower Site Waste</li><li>Scalable Design</li></ul>
+              </div>
+            </div>
+            <a href="highrise-datacentres.html" class="btn-know-more">Know More →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ WAY OF WORKING ═══════════ -->
+<section class="wow-section section-pad">
+  <div class="container">
+    <div class="wow-header reveal">
+      <div class="section-tag" style="color:rgba(255,255,255,0.4);">
+        <span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>
+        Why Choose MetalScope
+      </div>
+      <h2 class="display-md" style="color:var(--white);margin-bottom:12px;">WAY OF <span style="color:var(--red);">WORKING</span></h2>
+      <p class="wow-subtitle" style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:rgba(255,255,255,0.9);text-transform:uppercase;letter-spacing:0.04em;">PROJECT DELIVERY IS NOT OUR CLAIM,<br>IT IS OUR SYSTEM!</p>
+      <p class="wow-subtitle">Our Way of Working (WOW) system is built on the belief that successful project delivery depends on seamless handovers, clear accountability, and synchronized execution across the entire value chain.</p>
+      <div class="wow-key-stmt">
+        WE THINK IN <strong>KITS.</strong> EXECUTE IN <strong>PRECISION.</strong> DELIVER WITH <strong>CERTAINTY</strong> — END TO END
+      </div>
+    </div>
+    <div class="wow-steps">
+      <div class="wow-step">
+        <div class="wow-step-icon">
+          <span class="wow-step-num">01</span>
+          <svg viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="2"/><line x1="10" y1="12" x2="22" y2="12"/><line x1="10" y1="16" x2="18" y2="16"/><line x1="10" y1="20" x2="20" y2="20"/></svg>
+        </div>
+        <h4>Design</h4>
+        <p>3D modelling, BIM coordination &amp; client sign-off</p>
+      </div>
+      <div class="wow-step">
+        <div class="wow-step-icon">
+          <span class="wow-step-num">02</span>
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="4"/><path d="M16 2v4M16 26v4M2 16h4M26 16h4M6.34 6.34l2.83 2.83M22.83 22.83l2.83 2.83M6.34 25.66l2.83-2.83M22.83 9.17l2.83-2.83"/></svg>
+        </div>
+        <h4>Engineering</h4>
+        <p>Load calcs, code-compliant detailing &amp; drawings</p>
+      </div>
+      <div class="wow-step">
+        <div class="wow-step-icon">
+          <span class="wow-step-num">03</span>
+          <svg viewBox="0 0 32 32"><rect x="4" y="12" width="24" height="16" rx="2"/><path d="M10 12V8a6 6 0 0 1 12 0v4"/><circle cx="16" cy="20" r="2"/></svg>
+        </div>
+        <h4>Production</h4>
+        <p>CNC fabrication, welding &amp; assembly under IS norms</p>
+      </div>
+      <div class="wow-step">
+        <div class="wow-step-icon">
+          <span class="wow-step-num">04</span>
+          <svg viewBox="0 0 32 32"><path d="M6 20 Q10 8 16 8 Q22 8 26 20"/><circle cx="16" cy="8" r="3"/><path d="M8 24 Q16 28 24 24"/></svg>
+        </div>
+        <h4>Painting</h4>
+        <p>Shot blasting, primer &amp; finish coat per IS 9999</p>
+      </div>
+      <div class="wow-step">
+        <div class="wow-step-icon">
+          <span class="wow-step-num">05</span>
+          <svg viewBox="0 0 32 32"><rect x="2" y="16" width="20" height="10" rx="2"/><path d="M22 20h4l4-4v8h-8"/><circle cx="8" cy="28" r="2"/><circle cx="20" cy="28" r="2"/></svg>
+        </div>
+        <h4>Despatch</h4>
+        <p>Logistics across 28 states with kit-level traceability</p>
+      </div>
+      <div class="wow-step">
+        <div class="wow-step-icon">
+          <span class="wow-step-num">06</span>
+          <svg viewBox="0 0 32 32"><polyline points="4,28 4,14 16,4 28,14 28,28"/><line x1="4" y1="28" x2="28" y2="28"/><rect x="12" y="20" width="8" height="8"/></svg>
+        </div>
+        <h4>Site Erection</h4>
+        <p>Own teams, lifting equipment &amp; handover certification</p>
+      </div>
+    </div>
+    <div class="wow-relay reveal">
+      "Every function is a runner in the relay, and passing the baton right, at the right time, to the right person is the essence of our culture."
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ COMMITMENT / TOC ═══════════ -->
+<section class="commitment-section section-pad">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">Our Commitment</div>
+      <h2 class="display-md">POWERED BY THE <span class="accent-red">THEORY OF CONSTRAINTS</span></h2>
+      <p>This shift ensures that every decision, plan, and action is driven by project timelines, customer commitments, and site realities.</p>
+    </div>
+    <div class="commitment-grid">
+      <div class="commitment-card reveal reveal-delay-1">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>On-time Delivery</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-2">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Reliable After-Sales Service</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-3">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+        <h3>Over 20+ Years of Expertise</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-4">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>Valued Engineering Solution</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-1">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Quality System (Stringent)</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-2">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Dynamic Team Work</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-3">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Committed Partnership</h3>
+      </div>
+      <div class="commitment-card reveal reveal-delay-4">
+        <div class="commitment-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        <h3>Total Solution Provider</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DELIVERED AT SCALE ═══════════ -->
+<section class="projects-section section-pad">
+  <div class="container">
+    <div class="projects-header-grid reveal">
+      <div>
+        <div class="section-tag white">Featured Projects / Selected Works</div>
+        <h2 class="display-lg" style="color:var(--white);">DELIVERED <span style="color:var(--red);">AT SCALE.</span><br>ACROSS INDUSTRIES.</h2>
+      </div>
+      <div style="display:flex;align-items:flex-end;padding-bottom:4px;">
+        <p style="color:rgba(255,255,255,0.55);font-size:0.9rem;line-height:1.7;">From semiconductor fabs to EV gigafactories — a glimpse of the structures that move India forward. Explore our complete portfolio on the Projects page.</p>
+      </div>
+    </div>
+    <div class="projects-cards-grid">
+      <div class="project-card featured reveal">
+        <img class="project-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Ola Electric Gigafactory">
+        <div class="project-card-overlay">
+          <div class="project-stats">
+            <span class="project-stat">142,000 SQM</span>
+            <span class="project-stat">18 Months</span>
+            <span class="project-stat">9,480 MT Steel</span>
+          </div>
+          <div class="project-tag-line">
+            <span class="project-tag">Automotive / EV / Noida</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">OLA ELECTRIC — GIGAFACTORY PHASE II</h3>
+          <p class="project-desc">Complete pre-engineered building solution for India's largest two-wheeler EV manufacturing campus. Includes paint shop, battery assembly halls, and an integrated logistics yard with 16 dock levellers.</p>
+          <a href="projects.html" class="project-link">Know More →</a>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-1">
+        <img class="project-card-img" src="https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=700&q=80" alt="Foxconn Cleanroom Chennai">
+        <div class="project-card-overlay">
+          <div class="project-tag-line">
+            <span class="project-tag">Semiconductor</span>
+            <span class="project-year">2024</span>
+          </div>
+          <h3 class="project-title">FOXCONN — CLEANROOM SHELL, CHENNAI</h3>
+          <a href="projects.html" class="project-link">Know More →</a>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-2">
+        <img class="project-card-img" src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=700&q=80" alt="ICF Vande Bharat">
+        <div class="project-card-overlay">
+          <div class="project-tag-line">
+            <span class="project-tag">Railways / RDSO</span>
+            <span class="project-year">2023</span>
+          </div>
+          <h3 class="project-title">ICF — VANDE BHARAT COACH COMPONENTS</h3>
+          <a href="projects.html" class="project-link">Know More →</a>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;" class="reveal">
+      <a href="projects.html" class="btn btn-outline-white btn-arrow">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CLIENTELE ═══════════ -->
+<section class="clientele-section">
+  <div class="container">
+    <div class="section-tag" style="color:rgba(255,255,255,0.4);">
+      <span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>
+      Trusted By Industry Leaders
+    </div>
+    <h2>OUR ESTEEMED CLIENTELE</h2>
+  </div>
+  <div class="marquee-wrapper" style="margin-top:32px;">
+    <div class="marquee-track">
+      <div class="client-logo">KOBELCO</div><div class="client-logo">HONDA</div><div class="client-logo">HYUNDAI</div><div class="client-logo">KIA</div><div class="client-logo">BOSCH</div><div class="client-logo">FOXCONN</div><div class="client-logo">OLA ELECTRIC</div><div class="client-logo">BHEL</div><div class="client-logo">NTPC</div><div class="client-logo">ICF</div><div class="client-logo">MICHELIN</div><div class="client-logo">DAIMLER</div><div class="client-logo">VOLTAS</div><div class="client-logo">MITSUBISHI</div><div class="client-logo">GSK</div><div class="client-logo">IOCL</div><div class="client-logo">P&amp;G</div><div class="client-logo">CADBURY</div><div class="client-logo">DP WORLD</div><div class="client-logo">L&amp;T</div><div class="client-logo">SHIMIZU</div><div class="client-logo">FUJITA</div><div class="client-logo">TEREX</div><div class="client-logo">SCHWING</div><div class="client-logo">JIPMER</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TESTIMONIALS ═══════════ -->
+<section class="testimonials-section section-pad">
+  <div class="container">
+    <div class="testimonials-header-grid reveal">
+      <div>
+        <div class="section-tag white">Client Voice / Testimonials</div>
+        <h2 class="display-md" style="color:var(--white);">WHAT OUR <span style="color:var(--red);">PARTNERS</span><br>SAY ABOUT US</h2>
+      </div>
+      <div style="display:flex;align-items:flex-end;">
+        <p>From automotive giants to semiconductor leaders — hear directly from the clients whose projects we've delivered. Click any video to watch.</p>
+      </div>
+    </div>
+    <div class="video-cards-grid">
+      <div class="video-card reveal reveal-delay-1">
+        <div class="video-thumb">
+          <img class="video-thumb-bg" src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=600&q=70" alt="">
+          <div class="video-play-btn">
+            <div class="video-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+          <span class="video-duration">2:45</span>
+        </div>
+        <div class="video-info">
+          <p class="video-category">Automotive / PEB Project</p>
+          <p class="video-person">Head of Projects</p>
+          <p class="video-company">Honda Cars India Ltd.</p>
+        </div>
+      </div>
+      <div class="video-card reveal reveal-delay-2">
+        <div class="video-thumb">
+          <img class="video-thumb-bg" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70" alt="">
+          <div class="video-play-btn">
+            <div class="video-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+          <span class="video-duration">3:12</span>
+        </div>
+        <div class="video-info">
+          <p class="video-category">Semiconductor / EMS Facility</p>
+          <p class="video-person">VP Manufacturing</p>
+          <p class="video-company">Foxconn Technology Group</p>
+        </div>
+      </div>
+      <div class="video-card reveal reveal-delay-3">
+        <div class="video-thumb">
+          <img class="video-thumb-bg" src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=70" alt="">
+          <div class="video-play-btn">
+            <div class="video-play-circle">
+              <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            </div>
+          </div>
+          <span class="video-duration">1:58</span>
+        </div>
+        <div class="video-info">
+          <p class="video-category">Railways / Rolling Stock</p>
+          <p class="video-person">General Manager — Procurement</p>
+          <p class="video-company">Integral Coach Factory, Chennai</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ AWARDS & CERTS ═══════════ -->
+<section class="certs-section section-pad">
+  <div class="container">
+    <!-- Certifications -->
+    <div class="certs-header reveal">
+      <div>
+        <div class="section-tag" style="color:rgba(255,255,255,0.4);"><span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>Quality Regime / Accreditations</div>
+        <h2 class="display-md" style="color:var(--white);">AUDITED. APPROVED.<br><span style="color:var(--red);">ALWAYS.</span></h2>
+      </div>
+      <div>
+        <p>Independent certifications and industry approvals that back every kit we ship — from steel mill to site.</p>
+      </div>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card reveal reveal-delay-1">
+        <div class="cert-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M8 21H4a2 2 0 0 1-2-2v-1a6 6 0 0 1 12 0v1a2 2 0 0 1-2 2h-4z"/><path d="M16 3l1.5 1.5L22 0"/></svg></div>
+        <h3>ISO 9001:2015</h3>
+        <p>Quality Management System certified across all manufacturing operations.</p>
+        <span class="cert-num">CERT. # QMS / 18402</span>
+      </div>
+      <div class="cert-card reveal reveal-delay-2">
+        <div class="cert-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/><line x1="3" y1="14" x2="9" y2="14"/><line x1="3" y1="18" x2="9" y2="18"/></svg></div>
+        <h3>RDSO Approved</h3>
+        <p>Approved vendor for Indian Railways rolling stock and coach components.</p>
+        <span class="cert-num">VENDOR # RDSO / 7411</span>
+      </div>
+      <div class="cert-card reveal reveal-delay-3">
+        <div class="cert-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg></div>
+        <h3>CRISIL Rated BBB+</h3>
+        <p>Investment-grade rating for financial strength and project execution capability.</p>
+        <span class="cert-num">RATING BBB+ / STABLE</span>
+      </div>
+      <div class="cert-card reveal reveal-delay-4">
+        <div class="cert-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>EN 1090-2 EXC3</h3>
+        <p>European structural steel execution class for export-grade fabrication.</p>
+        <span class="cert-num">CERT. # TUV / EXC3-22</span>
+      </div>
+    </div>
+
+    <!-- Awards -->
+    <div class="awards-header reveal">
+      <div>
+        <div class="section-tag" style="color:rgba(255,255,255,0.4);"><span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>Awards &amp; Recognition / Industry Milestones</div>
+        <h2 class="display-md" style="color:var(--white);">RECOGNISED FOR<br><span style="color:var(--red);">EXCELLENCE.</span></h2>
+      </div>
+      <div>
+        <p>Milestones that reflect our engineering precision, delivery commitment, and contribution to India's infrastructure growth.</p>
+      </div>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card reveal reveal-delay-1">
+        <div class="award-year">2024</div>
+        <div class="award-title">Best PEB Manufacturer — South India</div>
+        <p class="award-desc">Recognised by the Indian Steel Association for manufacturing excellence and delivery performance.</p>
+      </div>
+      <div class="award-card reveal reveal-delay-2">
+        <div class="award-year">2023</div>
+        <div class="award-title">RDSO Vendor of the Year</div>
+        <p class="award-desc">Awarded by Indian Railways for outstanding quality and on-time delivery of rolling stock components.</p>
+      </div>
+      <div class="award-card reveal reveal-delay-3">
+        <div class="award-year">2022</div>
+        <div class="award-title">IGBC Green Building Champion</div>
+        <p class="award-desc">Recognised by the Indian Green Building Council for sustainable steel construction practices.</p>
+      </div>
+      <div class="award-card reveal reveal-delay-1">
+        <div class="award-year">2021</div>
+        <div class="award-title">Make in India Excellence Award</div>
+        <p class="award-desc">Commended by the Ministry of Commerce for advancing domestic manufacturing capabilities.</p>
+      </div>
+      <div class="award-card reveal reveal-delay-2">
+        <div class="award-year">2019</div>
+        <div class="award-title">CII Industrial Excellence Award</div>
+        <p class="award-desc">Confederation of Indian Industry recognition for operational excellence and quality systems.</p>
+      </div>
+      <div class="award-card reveal reveal-delay-3">
+        <div class="award-year">2018</div>
+        <div class="award-title">CRISIL BBB+ Financial Stability</div>
+        <p class="award-desc">Highest financial credibility rating for a mid-tier structural steel manufacturer in South India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ LEAD FORM ═══════════ -->
+<section class="lead-section section-pad" id="quote">
+  <div class="container">
+    <div class="lead-grid">
+      <div class="lead-left reveal">
+        <div class="section-tag white">Let's Build Something / Get in Touch</div>
+        <h2 class="display-lg" style="color:var(--white);">HAVE A PROJECT?<br><span style="color:var(--red);">LET'S ENGINEER IT.</span></h2>
+        <p style="color:rgba(255,255,255,0.6);margin-top:20px;font-size:0.95rem;line-height:1.75;">Request a structural feasibility review, RFQ, or a plant visit at our Pondicherry or Vannur facilities. Our engineering team will respond within 24 hours.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div class="contact-detail-text">
+            <h4>Head Office</h4>
+            <p>Plot 14, Industrial Estate, Mettupalayam,<br>Pondicherry 605008</p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg></div>
+          <div class="contact-detail-text">
+            <h4>Direct</h4>
+            <p><a href="tel:+914132248800">+91 413 224 8800</a></p>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div class="contact-detail-text">
+            <h4>Email</h4>
+            <p><a href="mailto:projects@metalscopeindia.com">projects@metalscopeindia.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="lead-right reveal reveal-delay-2">
+        <div class="lead-form-box">
+          <p class="lead-form-tag">RFQ Form / 90 Sec</p>
+          <h3 class="lead-form-title">Request a Quote</h3>
+          <form class="lead-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="company" placeholder="Company name">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Work Email</label>
+                <input type="email" id="email" name="email" placeholder="your@company.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group full">
+                <label for="vertical">Select Vertical</label>
+                <select id="vertical" name="vertical">
+                  <option value="">Choose a business vertical</option>
+                  <option>Pre-Engineered Buildings</option>
+                  <option>Structural Steel</option>
+                  <option>Bridges &amp; Infrastructure</option>
+                  <option>Railcar &amp; Rolling Stock</option>
+                  <option>Steel Doors</option>
+                  <option>EPC Projects</option>
+                  <option>High-Rise Buildings &amp; Data Centres</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group full">
+                <label for="brief">Project Brief — Tonnage, Location, Timeline</label>
+                <textarea id="brief" name="brief" placeholder="Briefly describe your project requirements..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-red form-submit btn-arrow">Submit Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-mark">M</div>
+          <div class="footer-logo-text">
+            <span>MetalScope</span>
+            <span>India / Since 1984</span>
+          </div>
+        </div>
+        <p class="footer-brand-desc">A Royal Fab Group company, Engineering, fabricating, and erecting India's most demanding structural steel projects from our facilities in Pondicherry and Tamil Nadu.</p>
+        <div class="footer-address">
+          <span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Plot 14, Industrial Estate, Mettupalayam,<br>Pondicherry — 605008, India</span>
+          <span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg>+91 413 224 8800</span>
+          <span><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>projects@metalscopeindia.com</span>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="#" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" class="social-icon" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--black)"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="verticals.html">Business Vertical</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="excellence.html">Excellence</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Verticals</h4>
+        <ul>
+          <li><a href="peb.html">Pre-Engineered Buildings</a></li>
+          <li><a href="structural-steel.html">Structural Steel</a></li>
+          <li><a href="bridges.html">Bridges &amp; Infra</a></li>
+          <li><a href="railcar.html">Rail Coach</a></li>
+          <li><a href="steel-doors.html">Steel Doors</a></li>
+          <li><a href="epc.html">EPC Projects</a></li>
+          <li><a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="projects.html">Automotive &amp; EV</a></li>
+          <li><a href="projects.html">Semiconductor</a></li>
+          <li><a href="projects.html">Pharma</a></li>
+          <li><a href="projects.html">Oil &amp; Gas</a></li>
+          <li><a href="projects.html">Data Centres</a></li>
+          <li><a href="projects.html">Social Infrastructure</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="about.html#chairman">Chairman's Note</a></li>
+          <li><a href="about.html#team">Leadership</a></li>
+          <li><a href="mission-vision.html#certs">Certifications</a></li>
+          <li><a href="contact.html">Careers</a></li>
+          <li><a href="contact.html">Partner With Us</a></li>
+          <li><a href="contact.html">Supplier Registration</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Metal Scope India - A Royal Fab Group Company - CIN V28190TN1984PLC011023</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Cookies</a>
+        <a href="#">Website Credits</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Video Modal -->
+<div class="video-modal" id="videoModal">
+  <div class="video-modal-inner">
+    <button class="video-modal-close">
+      <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="video-modal-placeholder">
+      <svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"><circle cx="24" cy="24" r="20"/><polygon points="20 16 36 24 20 32 20 16" fill="rgba(255,255,255,0.2)"/></svg>
+      <span>Client testimonial video — content to be provided</span>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta">
+  <a href="contact.html#quote">
+    <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <span class="sticky-label">Request a Quote</span>
+  </a>
+  <a href="contact.html">
+    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg>
+    <span class="sticky-label">Contact Our Team</span>
+  </a>
+  <a href="#">
+    <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+    <span class="sticky-label">Download Brochure</span>
+  </a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

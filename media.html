@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media — News, Blogs & Events | MetalScope India</title>
+<meta name="description" content="Latest news, insights, blogs, and events from MetalScope India — India's trusted structural steel engineering partner since 1984.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .page-hero { position:relative; min-height:52vh; display:flex; align-items:flex-end; padding-bottom:80px; overflow:hidden; background:var(--black); }
+  .page-hero-bg { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.3; }
+  .page-hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, var(--black) 30%, rgba(10,10,20,0.4) 100%); }
+  .page-hero-content { position:relative; z-index:2; }
+  .page-hero-tag { font-family:var(--font-body); font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .page-hero-tag::before { content:''; display:inline-block; width:28px; height:2px; background:var(--red); flex-shrink:0; }
+  .page-hero h1 { color:var(--white); margin-bottom:12px; }
+  .page-hero-sub { color:rgba(255,255,255,0.65); font-size:1.1rem; max-width:560px; }
+
+  .section-pad { padding:80px 0; }
+  .accent-red { color:var(--red); }
+
+  /* Section headers */
+  .media-section-header { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:40px; gap:24px; flex-wrap:wrap; }
+  .media-section-header-left .section-tag { margin-bottom:8px; }
+  .media-section-header h2 { font-family:var(--font-display); font-size:clamp(1.6rem, 2.5vw, 2.4rem); font-weight:700; text-transform:uppercase; color:var(--text); margin-bottom:0; line-height:1.1; }
+  .media-section-header h2 .accent-red { color:var(--red); }
+  .media-more-link { display:inline-flex; align-items:center; gap:6px; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--red); white-space:nowrap; padding-bottom:4px; border-bottom:1px solid transparent; transition:border-color 0.3s; }
+  .media-more-link:hover { border-color:var(--red); }
+  .media-more-link svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2; transition:transform 0.3s; }
+  .media-more-link:hover svg { transform:translateX(3px); }
+
+  /* Media cards */
+  .media-cards-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .media-card { background:var(--white); border-radius:4px; overflow:hidden; border:1px solid var(--border); transition:transform 0.3s, box-shadow 0.3s; }
+  .media-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.08); }
+  .media-card-thumb { position:relative; aspect-ratio:16/10; background:var(--surface-2); overflow:hidden; }
+  .media-card-thumb img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s; }
+  .media-card:hover .media-card-thumb img { transform:scale(1.04); }
+  .media-card-thumb-placeholder { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; background:var(--surface-2); }
+  .media-card-thumb-placeholder svg { width:40px; height:40px; stroke:var(--border); fill:none; stroke-width:1.5; }
+  .media-card-thumb-placeholder span { font-size:0.75rem; color:var(--border); font-weight:600; letter-spacing:0.08em; text-transform:uppercase; }
+  .media-card-tag { position:absolute; top:16px; left:16px; background:var(--red); color:var(--white); font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:4px 10px; border-radius:2px; }
+  .media-card-body { padding:24px; }
+  .media-card-meta { display:flex; align-items:center; gap:16px; margin-bottom:12px; }
+  .media-card-date { font-size:0.75rem; color:var(--text-muted); }
+  .media-card-category { font-size:0.7rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--red); }
+  .media-card h3 { font-family:var(--font-display); font-size:1.05rem; font-weight:700; color:var(--navy); margin-bottom:10px; line-height:1.35; text-transform:uppercase; }
+  .media-card p { font-size:0.825rem; color:var(--text-muted); line-height:1.6; margin-bottom:16px; }
+  .media-card-link { font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--red); display:inline-flex; align-items:center; gap:6px; }
+  .media-card-link svg { width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2; transition:transform 0.3s; }
+  .media-card-link:hover svg { transform:translateX(3px); }
+
+  /* Placeholder card variant */
+  .media-card.placeholder .media-card-thumb-placeholder { min-height:180px; }
+  .media-card.placeholder .media-card-body { opacity:0.6; }
+
+  /* Content placeholder notice */
+  .content-notice { text-align:center; margin-top:20px; }
+  .content-notice-inner { display:inline-flex; align-items:center; gap:10px; background:var(--surface-2); border:1px dashed var(--border); padding:10px 24px; border-radius:2px; font-size:0.75rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:var(--text-muted); }
+  .content-notice-inner svg { width:14px; height:14px; stroke:var(--text-muted); fill:none; stroke-width:2; flex-shrink:0; }
+
+  /* Section divider */
+  .section-divider { border:none; border-top:1px solid var(--border); margin:0; }
+
+  /* Events grid — slightly different layout */
+  .events-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:24px; }
+  .event-card { background:var(--white); border-radius:4px; border:1px solid var(--border); overflow:hidden; transition:transform 0.3s, box-shadow 0.3s; }
+  .event-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,0.08); }
+  .event-card-date-bar { background:var(--navy); padding:20px 24px; display:flex; align-items:center; gap:20px; }
+  .event-date-block { text-align:center; min-width:48px; }
+  .event-date-day { font-family:var(--font-num); font-size:2.2rem; font-weight:800; color:var(--white); line-height:1; }
+  .event-date-month { font-size:0.65rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-top:2px; }
+  .event-date-year { font-size:0.65rem; font-weight:600; color:rgba(255,255,255,0.35); }
+  .event-card-type { background:var(--red); color:var(--white); font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:3px 10px; border-radius:2px; align-self:flex-start; }
+  .event-card-body { padding:24px; }
+  .event-card-body h3 { font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--navy); text-transform:uppercase; margin-bottom:8px; line-height:1.3; }
+  .event-card-body p { font-size:0.825rem; color:var(--text-muted); line-height:1.6; margin-bottom:14px; }
+  .event-location { display:flex; align-items:center; gap:6px; font-size:0.75rem; color:var(--text-muted); }
+  .event-location svg { width:12px; height:12px; stroke:var(--red); fill:none; stroke-width:2; flex-shrink:0; }
+
+  .cta-strip { background:var(--navy); text-align:center; padding:80px 24px; }
+  .cta-strip p { color:rgba(255,255,255,0.6); max-width:520px; margin:0 auto 36px; font-size:0.95rem; line-height:1.7; }
+  .cta-strip-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+  @media (max-width:900px) { .media-cards-grid, .events-grid { grid-template-columns:repeat(2, 1fr); } }
+  @media (max-width:560px) { .media-cards-grid, .events-grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">M</div>
+      <div class="nav-logo-text"><span>MetalScope</span><span>India · Since 1984</span></div>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About Us <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown"><a href="about.html">Who We Are</a><a href="mission-vision.html">Mission &amp; Vision</a></div>
+      </li>
+      <li class="nav-item">
+        <a href="verticals.html" class="nav-link">Business Vertical <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown">
+          <a href="peb.html">Pre-Engineered Buildings</a><a href="structural-steel.html">Structural Steel</a>
+          <a href="bridges.html">Bridges &amp; Infrastructure</a><a href="railcar.html">Railcar &amp; Rolling Stock</a>
+          <a href="steel-doors.html">Steel Doors</a><a href="epc.html">EPC Projects</a>
+          <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="excellence.html" class="nav-link">Excellence</a></li>
+      <li class="nav-item"><a href="media.html" class="nav-link active">Media</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-red nav-cta btn-arrow">Get a Quote</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="navMobileOverlay">
+  <button id="navMobileClose" style="position:absolute;top:24px;right:24px;width:40px;height:40px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/></svg></button>
+  <ul>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home</a></li>
+    <li class="mobile-nav-item"><button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">About Us <span class="mobile-caret" style="transition:transform 0.3s;">▾</span></button><div class="mobile-sub-links"><a href="about.html">Who We Are</a><a href="mission-vision.html">Mission &amp; Vision</a></div></li>
+    <li class="mobile-nav-item"><button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">Business Vertical <span class="mobile-caret" style="transition:transform 0.3s;">▾</span></button><div class="mobile-sub-links"><a href="peb.html">Pre-Engineered Buildings</a><a href="structural-steel.html">Structural Steel</a><a href="bridges.html">Bridges &amp; Infrastructure</a><a href="railcar.html">Railcar &amp; Rolling Stock</a><a href="steel-doors.html">Steel Doors</a><a href="epc.html">EPC Projects</a><a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a></div></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="projects.html">Projects</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="excellence.html">Excellence</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="media.html">Media</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="contact.html#quote" class="btn btn-red" style="margin-top:32px;align-self:flex-start;">Get a Quote →</a>
+</div>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <img class="page-hero-bg" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80" alt="MetalScope media and news">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-tag">MetalScope India</div>
+    <h1 class="display-lg"><span style="color:var(--red);">MEDIA</span></h1>
+    <p class="page-hero-sub">News, Insights, Blogs &amp; Events from MetalScope India</p>
+  </div>
+</section>
+
+<!-- ═══════════ LATEST NEWS ═══════════ -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="media-section-header reveal">
+      <div class="media-section-header-left">
+        <div class="section-tag">Latest Updates</div>
+        <h2>LATEST <span class="accent-red">NEWS</span></h2>
+      </div>
+      <a href="#" class="media-more-link">View All News <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="media-cards-grid">
+
+      <div class="media-card placeholder reveal reveal-delay-1">
+        <div class="media-card-thumb">
+          <div class="media-card-thumb-placeholder">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Pending</span>
+          </div>
+          <div class="media-card-tag">News</div>
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-meta">
+            <span class="media-card-date">Coming Soon</span>
+            <span class="media-card-category">Corporate</span>
+          </div>
+          <h3>News Article Title To Be Provided</h3>
+          <p>News content to be provided by the client team. This card is a placeholder for the first featured news article.</p>
+          <span class="media-card-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="media-card placeholder reveal reveal-delay-2">
+        <div class="media-card-thumb">
+          <div class="media-card-thumb-placeholder">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Pending</span>
+          </div>
+          <div class="media-card-tag">Press Release</div>
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-meta">
+            <span class="media-card-date">Coming Soon</span>
+            <span class="media-card-category">Operations</span>
+          </div>
+          <h3>Second News Article Title Placeholder</h3>
+          <p>News content to be provided by the client team. This card is a placeholder for the second featured news article.</p>
+          <span class="media-card-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="media-card placeholder reveal reveal-delay-3">
+        <div class="media-card-thumb">
+          <div class="media-card-thumb-placeholder">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            <span>Image Pending</span>
+          </div>
+          <div class="media-card-tag">Achievement</div>
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-meta">
+            <span class="media-card-date">Coming Soon</span>
+            <span class="media-card-category">Milestone</span>
+          </div>
+          <h3>Third News Article Title Placeholder</h3>
+          <p>News content to be provided by the client team. This card is a placeholder for the third featured news article.</p>
+          <span class="media-card-link">Read More <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="content-notice reveal">
+      <div class="content-notice-inner">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        News content to be provided by client
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════ BLOGS ═══════════ -->
+<section class="section-pad" style="background:var(--surface-2);">
+  <div class="container">
+    <div class="media-section-header reveal">
+      <div class="media-section-header-left">
+        <div class="section-tag">Insights &amp; Perspectives</div>
+        <h2>OUR <span class="accent-red">BLOGS</span></h2>
+      </div>
+      <a href="#" class="media-more-link">View All Blogs <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="media-cards-grid">
+
+      <div class="media-card placeholder reveal reveal-delay-1" style="background:var(--white);">
+        <div class="media-card-thumb">
+          <div class="media-card-thumb-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Blog Image Pending</span>
+          </div>
+          <div class="media-card-tag">Engineering</div>
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-meta">
+            <span class="media-card-date">Coming Soon</span>
+            <span class="media-card-category">Technical</span>
+          </div>
+          <h3>Blog Article Title To Be Provided</h3>
+          <p>Blog content and technical insights to be provided by the client team. This placeholder represents the first featured blog post.</p>
+          <span class="media-card-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="media-card placeholder reveal reveal-delay-2" style="background:var(--white);">
+        <div class="media-card-thumb">
+          <div class="media-card-thumb-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Blog Image Pending</span>
+          </div>
+          <div class="media-card-tag">Industry</div>
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-meta">
+            <span class="media-card-date">Coming Soon</span>
+            <span class="media-card-category">Perspective</span>
+          </div>
+          <h3>Second Blog Article Title Placeholder</h3>
+          <p>Blog content and industry perspective to be provided by the client team. This placeholder represents the second featured blog post.</p>
+          <span class="media-card-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+      <div class="media-card placeholder reveal reveal-delay-3" style="background:var(--white);">
+        <div class="media-card-thumb">
+          <div class="media-card-thumb-placeholder">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>Blog Image Pending</span>
+          </div>
+          <div class="media-card-tag">Innovation</div>
+        </div>
+        <div class="media-card-body">
+          <div class="media-card-meta">
+            <span class="media-card-date">Coming Soon</span>
+            <span class="media-card-category">Technology</span>
+          </div>
+          <h3>Third Blog Article Title Placeholder</h3>
+          <p>Blog content about innovation and technology to be provided by the client team. This placeholder represents the third featured blog post.</p>
+          <span class="media-card-link">Read Article <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </div>
+
+    </div>
+    <div class="content-notice reveal">
+      <div class="content-notice-inner">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Blog content to be provided by client
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ═══════════ EVENTS & ACTIVITIES ═══════════ -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="media-section-header reveal">
+      <div class="media-section-header-left">
+        <div class="section-tag">What's Happening</div>
+        <h2>EVENTS &amp; <span class="accent-red">ACTIVITIES</span></h2>
+      </div>
+      <a href="#" class="media-more-link">View All Events <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="events-grid">
+
+      <div class="event-card reveal reveal-delay-1">
+        <div class="event-card-date-bar">
+          <div class="event-date-block">
+            <div class="event-date-day">--</div>
+            <div class="event-date-month">Month</div>
+            <div class="event-date-year">2026</div>
+          </div>
+          <span class="event-card-type">Trade Show</span>
+        </div>
+        <div class="event-card-body">
+          <h3>Event Title To Be Provided</h3>
+          <p>Event details and description to be provided by the client team. This is a placeholder for the first upcoming event or activity.</p>
+          <div class="event-location">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Location to be confirmed
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card reveal reveal-delay-2">
+        <div class="event-card-date-bar">
+          <div class="event-date-block">
+            <div class="event-date-day">--</div>
+            <div class="event-date-month">Month</div>
+            <div class="event-date-year">2026</div>
+          </div>
+          <span class="event-card-type">Conference</span>
+        </div>
+        <div class="event-card-body">
+          <h3>Second Event Title Placeholder</h3>
+          <p>Event details and description to be provided by the client team. This is a placeholder for the second upcoming event or activity.</p>
+          <div class="event-location">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Location to be confirmed
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card reveal reveal-delay-3">
+        <div class="event-card-date-bar">
+          <div class="event-date-block">
+            <div class="event-date-day">--</div>
+            <div class="event-date-month">Month</div>
+            <div class="event-date-year">2026</div>
+          </div>
+          <span class="event-card-type">Workshop</span>
+        </div>
+        <div class="event-card-body">
+          <h3>Third Event Title Placeholder</h3>
+          <p>Event details and description to be provided by the client team. This is a placeholder for the third upcoming event or activity.</p>
+          <div class="event-location">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Location to be confirmed
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="content-notice reveal">
+      <div class="content-notice-inner">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Events content to be provided by client
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA STRIP ═══════════ -->
+<section class="cta-strip reveal">
+  <div class="section-tag" style="justify-content:center;color:rgba(255,255,255,0.5);"><span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>Stay Connected</div>
+  <h2 class="display-md" style="color:var(--white);margin-bottom:12px;">FOLLOW OUR<br><span style="color:var(--red);">JOURNEY</span></h2>
+  <p>Subscribe to our updates and follow us on LinkedIn to stay informed about MetalScope's projects, certifications, and industry insights.</p>
+  <div class="cta-strip-btns">
+    <a href="contact.html" class="btn btn-red btn-arrow">Get In Touch</a>
+    <a href="#" class="btn btn-outline-white">Follow on LinkedIn</a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer"><div class="container">
+  <div class="footer-main">
+    <div class="footer-brand"><div class="footer-logo"><div class="footer-logo-mark">M</div><div class="footer-logo-text"><span>MetalScope</span><span>India / Since 1984</span></div></div><p class="footer-brand-desc">A Royal Fab Group company. Engineering, fabricating, and erecting India's most demanding structural steel projects from our facilities in Pondicherry and Tamil Nadu.</p><div class="footer-address"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Plot 14, Industrial Estate, Mettupalayam, Pondicherry — 605008, India</span><span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg>+91 413 224 8800</span><span><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>projects@metalscopeindia.com</span></div><div class="footer-socials"><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--black)"/></svg></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="verticals.html">Business Vertical</a></li><li><a href="projects.html">Projects</a></li><li><a href="excellence.html">Excellence</a></li><li><a href="media.html">Media</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Verticals</h4><ul><li><a href="peb.html">Pre-Engineered Buildings</a></li><li><a href="structural-steel.html">Structural Steel</a></li><li><a href="bridges.html">Bridges &amp; Infra</a></li><li><a href="railcar.html">Rail Coach</a></li><li><a href="steel-doors.html">Steel Doors</a></li><li><a href="epc.html">EPC Projects</a></li><li><a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a></li></ul></div>
+    <div class="footer-col"><h4>Projects</h4><ul><li><a href="projects.html">Automotive &amp; EV</a></li><li><a href="projects.html">Semiconductor</a></li><li><a href="projects.html">Pharma</a></li><li><a href="projects.html">Oil &amp; Gas</a></li><li><a href="projects.html">Data Centres</a></li><li><a href="projects.html">Social Infrastructure</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#chairman">Chairman's Note</a></li><li><a href="about.html#team">Leadership</a></li><li><a href="mission-vision.html">Certifications</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Partner With Us</a></li><li><a href="contact.html">Supplier Registration</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Metal Scope India - A Royal Fab Group Company - CIN V28190TN1984PLC011023</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookies</a><a href="#">Website Credits</a><a href="#">Sitemap</a></div></div>
+</div></footer>
+
+<div class="sticky-cta">
+  <a href="contact.html#quote"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="sticky-label">Request a Quote</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg><span class="sticky-label">Contact Our Team</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="sticky-label">Download Brochure</span></a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

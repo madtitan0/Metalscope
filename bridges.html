@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steel Bridges & Infrastructure Engineering Solutions | MetalScope</title>
+<meta name="description" content="MetalScope India — RDSO-approved steel bridge design, fabrication, and erection. Road Over Bridge, FOB, Flyovers, and Network Marine Arch Bridges across India.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .page-hero {
+    position: relative; min-height: 60vh; display: flex; align-items: flex-end;
+    padding-bottom: 80px; overflow: hidden; background: var(--black);
+  }
+  .page-hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; }
+  .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, var(--black) 30%, rgba(10,10,20,0.4) 100%); }
+  .page-hero-content { position: relative; z-index: 2; }
+  .page-hero-tag { font-family:var(--font-body); font-size:0.7rem; font-weight:600; letter-spacing:0.15em; text-transform:uppercase; color:var(--red); display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+  .page-hero-tag::before { content:''; display:inline-block; width:28px; height:2px; background:var(--red); flex-shrink:0; }
+  .page-hero h1 { color: var(--white); margin-bottom: 12px; }
+  .page-hero-sub { color: rgba(255,255,255,0.65); font-size: 1.1rem; max-width: 560px; }
+
+  .section-pad { padding: 96px 0; }
+  .accent-red { color: var(--red); }
+  .section-heading { margin-bottom: 48px; }
+  .section-heading h2 { margin-bottom: 12px; }
+  .section-heading p { color: var(--text-muted); max-width: 640px; line-height: 1.7; font-size: 0.95rem; }
+
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .intro-grid p { color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; font-size: 0.95rem; }
+  .intro-image { border-radius: 4px; overflow: hidden; position: relative; }
+  .intro-image img { width: 100%; height: 480px; object-fit: cover; }
+  .intro-image-badge { position:absolute; bottom:24px; left:24px; background:var(--red); color:var(--white); font-family:var(--font-display); font-weight:700; font-size:0.75rem; letter-spacing:0.12em; text-transform:uppercase; padding:8px 16px; }
+
+  .advantages-section { background: var(--surface-2); }
+  .advantages-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-top: 48px; }
+  .adv-group { background: var(--white); border-radius: 4px; padding: 28px; border-top: 3px solid var(--red); }
+  .adv-group-title { font-family:var(--font-display); font-size:0.9rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--navy); margin-bottom:18px; display:flex; align-items:center; gap:8px; line-height:1.3; }
+  .adv-group-title svg { width:18px; height:18px; stroke:var(--red); fill:none; stroke-width:2; flex-shrink:0; }
+  .advantage-item { display:flex; align-items:flex-start; gap:10px; margin-bottom:12px; font-size:0.85rem; color:var(--text-muted); line-height:1.5; }
+  .advantage-item:last-child { margin-bottom:0; }
+  .advantage-item::before { content:''; width:5px; height:5px; border-radius:50%; background:var(--red); flex-shrink:0; margin-top:6px; }
+
+  /* Bridge Types */
+  .bridge-types-section { background: var(--white); }
+  .bridge-types-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; margin-top: 48px; }
+  .bridge-type-card { background: var(--surface); border-radius: 4px; padding: 32px 20px; text-align: center; border-bottom: 3px solid transparent; transition: border-color 0.3s, transform 0.3s; }
+  .bridge-type-card:hover { border-color: var(--red); transform: translateY(-4px); }
+  .bridge-type-icon { width: 56px; height: 56px; margin: 0 auto 16px; background: var(--navy); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .bridge-type-icon svg { width: 28px; height: 28px; stroke: var(--white); fill: none; stroke-width: 1.8; }
+  .bridge-type-card h3 { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; text-transform: uppercase; color: var(--navy); margin-bottom: 8px; line-height: 1.3; }
+  .bridge-type-card p { font-size: 0.8rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* Certifications */
+  .certs-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 48px; justify-content: center; }
+  .cert-badge { display: flex; align-items: center; gap: 10px; background: var(--navy); color: var(--white); padding: 12px 24px; border-radius: 2px; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .cert-badge svg { width: 18px; height: 18px; stroke: var(--red); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+  .cta-strip { background: var(--navy); text-align: center; padding: 80px 24px; }
+  .cta-strip .section-tag { color: rgba(255,255,255,0.5); justify-content: center; }
+  .cta-strip .section-tag::before { background: rgba(255,255,255,0.3); }
+  .cta-strip h2 { color: var(--white); margin-bottom: 12px; }
+  .cta-strip p { color: rgba(255,255,255,0.6); max-width: 520px; margin: 0 auto 36px; font-size: 0.95rem; line-height: 1.7; }
+  .cta-strip-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  @media (max-width: 1100px) { .advantages-grid { grid-template-columns: repeat(2, 1fr); } .bridge-types-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 900px) { .intro-grid { grid-template-columns: 1fr; gap: 40px; } }
+  @media (max-width: 600px) { .advantages-grid { grid-template-columns: 1fr; } .bridge-types-grid { grid-template-columns: repeat(2, 1fr); } .page-hero { min-height: 52vh; padding-bottom: 60px; } }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">M</div>
+      <div class="nav-logo-text"><span>MetalScope</span><span>India · Since 1984</span></div>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About Us <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown"><a href="about.html">Who We Are</a><a href="mission-vision.html">Mission &amp; Vision</a></div>
+      </li>
+      <li class="nav-item">
+        <a href="verticals.html" class="nav-link active">Business Vertical <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown">
+          <a href="peb.html">Pre-Engineered Buildings</a><a href="structural-steel.html">Structural Steel</a>
+          <a href="bridges.html">Bridges &amp; Infrastructure</a><a href="railcar.html">Railcar &amp; Rolling Stock</a>
+          <a href="steel-doors.html">Steel Doors</a><a href="epc.html">EPC Projects</a>
+          <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="excellence.html" class="nav-link">Excellence</a></li>
+      <li class="nav-item"><a href="media.html" class="nav-link">Media</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-red nav-cta btn-arrow">Get a Quote</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="nav-mobile-overlay" id="navMobileOverlay">
+  <button id="navMobileClose" style="position:absolute;top:24px;right:24px;width:40px;height:40px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/></svg></button>
+  <ul>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home</a></li>
+    <li class="mobile-nav-item"><button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">About Us <span class="mobile-caret" style="transition:transform 0.3s;">▾</span></button><div class="mobile-sub-links"><a href="about.html">Who We Are</a><a href="mission-vision.html">Mission &amp; Vision</a></div></li>
+    <li class="mobile-nav-item"><button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">Business Vertical <span class="mobile-caret" style="transition:transform 0.3s;">▾</span></button><div class="mobile-sub-links"><a href="peb.html">Pre-Engineered Buildings</a><a href="structural-steel.html">Structural Steel</a><a href="bridges.html">Bridges &amp; Infrastructure</a><a href="railcar.html">Railcar &amp; Rolling Stock</a><a href="steel-doors.html">Steel Doors</a><a href="epc.html">EPC Projects</a><a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a></div></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="projects.html">Projects</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="excellence.html">Excellence</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="media.html">Media</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="contact.html#quote" class="btn btn-red" style="margin-top:32px;align-self:flex-start;">Get a Quote →</a>
+</div>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <img class="page-hero-bg" src="https://images.unsplash.com/photo-1567360425618-1594206637d2?w=1600&q=80" alt="Steel bridge infrastructure">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-tag">Business Vertical / MetalScope India</div>
+    <h1 class="display-lg">BRIDGES &amp; <span style="color:var(--red);">INFRASTRUCTURE</span></h1>
+    <p class="page-hero-sub">Steel Bridges &amp; Infrastructure Engineering Solutions</p>
+  </div>
+</section>
+
+<!-- ═══════════ INTRODUCTION ═══════════ -->
+<section class="section-pad" style="background:var(--white);">
+  <div class="container">
+    <div class="intro-grid">
+      <div>
+        <div class="section-tag reveal">Business Vertical / Bridges &amp; Infrastructure</div>
+        <h2 class="display-md reveal" style="margin-bottom:32px;">CONNECTING <span class="accent-red">INDIA</span></h2>
+        <p class="reveal">Steel bridges represent one of the most technically demanding and socially impactful applications of structural engineering. Their design demands an integrated understanding of structural mechanics, material behaviour, fabrication constraints, erection methodology, and long-term durability — all of which must be balanced against programme, budget, and site constraints. MetalScope India brings this multi-disciplinary expertise to every bridge project we undertake.</p>
+        <p class="reveal">MetalScope specializes in the complete project lifecycle for steel bridges and infrastructure — from structural engineering, fabrication, project management, to site erection. Our design engineers work to IRS, IRC, and IS codes as well as international references including AASHTO and Eurocode, enabling us to serve both Indian Railways and highway infrastructure clients with equal confidence. We use high-performance weather-resistant steel (Cor-Ten / WR-grade) where appropriate to minimize maintenance requirements over the bridge's service life.</p>
+        <p class="reveal">Our fabrication facility in Pondicherry is equipped with heavy plate processing lines, submerged arc welding systems, large-format CNC drilling and cutting equipment, and a dedicated shot-blasting and painting bay capable of handling bridge girders up to 30 m in length. All bridge fabrication is executed under third-party inspection and is fully traceable to mill certificates and weld procedure qualification records.</p>
+      </div>
+      <div class="intro-image reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1567360425618-1594206637d2?w=800&q=80" alt="Steel bridge engineering and fabrication">
+        <div class="intro-image-badge">Bridges &amp; Infrastructure</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ADVANTAGES ═══════════ -->
+<section class="advantages-section section-pad">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">Advantages of Steel Bridges</div>
+      <h2 class="display-md">WHY <span class="accent-red">STEEL BRIDGES</span></h2>
+      <p>Steel bridges offer a unique combination of structural performance, speed of erection, and long-term durability that no other material can match.</p>
+    </div>
+    <div class="advantages-grid">
+
+      <div class="adv-group reveal reveal-delay-1">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>Decreased Structural Weight</div>
+        <div class="advantage-item">Steel's high strength-to-weight ratio results in bridge superstructures that are significantly lighter than equivalent concrete designs.</div>
+        <div class="advantage-item">Lighter superstructure reduces pier and abutment loads, enabling more slender and economical substructure designs.</div>
+        <div class="advantage-item">Reduced self-weight allows longer spans between supports, minimizing the number of intermediate piers required in river or road crossings.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-2">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Faster Erection</div>
+        <div class="advantage-item">Prefabricated steel girders and trusses can be launched or craned into position rapidly, minimizing traffic or rail disruption during construction.</div>
+        <div class="advantage-item">No in-situ concrete curing periods — once steel is in position and bolted/welded, the structure is immediately load-bearing.</div>
+        <div class="advantage-item">Night-time and weekend erection windows are easily achievable with steel, enabling bridges over busy roads and rail lines to be erected with minimal service interruption.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-3">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Lighter Foundations</div>
+        <div class="advantage-item">The reduced dead load of a steel superstructure directly translates to smaller and shallower foundation systems, lowering geotechnical risk and cost.</div>
+        <div class="advantage-item">On sites with difficult ground conditions, the weight savings of steel can be decisive in achieving a viable structural solution.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-4">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Structural Efficiency</div>
+        <div class="advantage-item">Plate girder and box girder sections can be optimized with variable depth and flange thickness, placing material only where structural demand is highest.</div>
+        <div class="advantage-item">High-strength steel grades (S355, S460) enable slender profiles that reduce wind loading, improve hydraulic clearance, and minimize visual impact.</div>
+        <div class="advantage-item">Composite action between steel girders and reinforced concrete decks substantially increases stiffness and reduces deflections under live load.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-1">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Long-Term Durability</div>
+        <div class="advantage-item">Modern weathering steel grades form a stable patina that actively resists further corrosion, dramatically reducing the frequency and cost of maintenance repainting.</div>
+        <div class="advantage-item">Steel bridges are readily inspectable — all structural members are visible and accessible for periodic inspection, fatigue assessment, and targeted repair.</div>
+        <div class="advantage-item">Damaged or worn components can be individually replaced without removing the entire superstructure, extending service life at low cost.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-2">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Environmental Benefits</div>
+        <div class="advantage-item">Steel is 100% recyclable and retains its full structural value when reprocessed — bridge steel has among the highest end-of-life recovery rates of any construction material.</div>
+        <div class="advantage-item">Prefabrication eliminates on-site concrete batching, reducing water consumption, waste generation, and carbon emissions associated with conventional bridge construction.</div>
+        <div class="advantage-item">Lighter foundations reduce the volume of concrete and reinforcement required, further lowering the embodied carbon footprint of the overall structure.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-3">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>Faster Construction</div>
+        <div class="advantage-item">The parallel fabrication and site preparation workflow inherent to steel bridge projects compresses overall delivery schedules by 30–50% compared to conventional cast-in-place concrete construction.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-4">
+        <div class="adv-group-title"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Architectural Aesthetics</div>
+        <div class="advantage-item">Steel's formability enables elegant arch, cable-stayed, and truss profiles that enhance the visual character of the surrounding landscape and urban environment.</div>
+        <div class="advantage-item">Slender profiles and graceful curves create landmarks that stand as enduring symbols of engineering ambition and civic pride.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ BRIDGE TYPES ═══════════ -->
+<section class="bridge-types-section section-pad">
+  <div class="container">
+    <div class="section-heading reveal" style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">Bridge Typologies</div>
+      <h2 class="display-md">BRIDGE <span class="accent-red">TYPES WE BUILD</span></h2>
+      <p style="margin:0 auto;">From railway over-bridges to landmark marine arch structures — MetalScope fabricates and erects every category of steel bridge.</p>
+    </div>
+    <div class="bridge-types-grid">
+
+      <div class="bridge-type-card reveal reveal-delay-1">
+        <div class="bridge-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 17h18M5 17V7h14v10M3 7h18"/></svg>
+        </div>
+        <h3>Road Over Bridge</h3>
+        <p>ROB structures carrying road traffic over railway lines — RDSO and RITES compliant fabrication with full traceability.</p>
+      </div>
+
+      <div class="bridge-type-card reveal reveal-delay-2">
+        <div class="bridge-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M5 17V7"/><path d="M19 17V7"/><path d="M2 12h20"/><path d="M5 7h14"/><path d="M5 17h14"/></svg>
+        </div>
+        <h3>Road Under Bridge</h3>
+        <p>RUB solutions enabling road passage beneath existing rail embankments — minimal traffic disruption during erection.</p>
+      </div>
+
+      <div class="bridge-type-card reveal reveal-delay-3">
+        <div class="bridge-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 17h18M3 7h18M7 7v10M17 7v10M10 12h4"/></svg>
+        </div>
+        <h3>Pedestrian Bridge / FOB</h3>
+        <p>Foot Over Bridges for railway stations, urban intersections, and educational campuses — designed for high pedestrian volumes.</p>
+      </div>
+
+      <div class="bridge-type-card reveal reveal-delay-4">
+        <div class="bridge-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 17h18"/><path d="M5 17V10Q12 3 19 10v7"/></svg>
+        </div>
+        <h3>Flyover</h3>
+        <p>Multi-span elevated highway structures with composite steel-concrete decks for fast-track urban traffic decongestion projects.</p>
+      </div>
+
+      <div class="bridge-type-card reveal reveal-delay-1">
+        <div class="bridge-type-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 17Q12 5 20 17"/><path d="M3 17h18"/><line x1="12" y1="5" x2="12" y2="17"/><line x1="8" y1="9" x2="8" y2="17"/><line x1="16" y1="9" x2="16" y2="17"/></svg>
+        </div>
+        <h3>Network Marine Arch</h3>
+        <p>Landmark arch bridges with network hanger systems for river crossings and signature infrastructure — complex geometry fabricated with precision.</p>
+      </div>
+
+    </div>
+
+    <!-- Certifications -->
+    <div style="margin-top:64px;text-align:center;" class="reveal">
+      <div class="section-tag" style="justify-content:center;margin-bottom:24px;">Approvals &amp; Certifications</div>
+      <h3 class="display-sm" style="margin-bottom:32px;">APPROVED BY INDIA'S LEADING <span class="accent-red">AUTHORITIES</span></h3>
+      <div class="certs-row">
+        <div class="cert-badge"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>RDSO Approved</div>
+        <div class="cert-badge"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>RITES Certified</div>
+        <div class="cert-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>BHEL &amp; NTPC Approved</div>
+        <div class="cert-badge"><svg viewBox="0 0 24 24"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>Mfr. Eng. Services</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA STRIP ═══════════ -->
+<section class="cta-strip reveal">
+  <div class="section-tag" style="justify-content:center;color:rgba(255,255,255,0.5);"><span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>Start Your Project</div>
+  <h2 class="display-md" style="color:var(--white);margin-bottom:12px;">ENGINEERING INDIA'S<br><span style="color:var(--red);">NEXT BRIDGE</span></h2>
+  <p>From RDSO-approved ROBs to landmark marine arch structures — MetalScope delivers bridges that connect communities and stand for generations. Send us your brief today.</p>
+  <div class="cta-strip-btns">
+    <a href="contact.html#quote" class="btn btn-red btn-arrow">Request a Quote</a>
+    <a href="contact.html" class="btn btn-outline-white">Contact Our Team</a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer"><div class="container">
+  <div class="footer-main">
+    <div class="footer-brand"><div class="footer-logo"><div class="footer-logo-mark">M</div><div class="footer-logo-text"><span>MetalScope</span><span>India / Since 1984</span></div></div><p class="footer-brand-desc">A Royal Fab Group company. Engineering, fabricating, and erecting India's most demanding structural steel projects from our facilities in Pondicherry and Tamil Nadu.</p><div class="footer-address"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Plot 14, Industrial Estate, Mettupalayam, Pondicherry — 605008, India</span><span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg>+91 413 224 8800</span><span><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>projects@metalscopeindia.com</span></div><div class="footer-socials"><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--black)"/></svg></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="verticals.html">Business Vertical</a></li><li><a href="projects.html">Projects</a></li><li><a href="excellence.html">Excellence</a></li><li><a href="media.html">Media</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Verticals</h4><ul><li><a href="peb.html">Pre-Engineered Buildings</a></li><li><a href="structural-steel.html">Structural Steel</a></li><li><a href="bridges.html">Bridges &amp; Infra</a></li><li><a href="railcar.html">Rail Coach</a></li><li><a href="steel-doors.html">Steel Doors</a></li><li><a href="epc.html">EPC Projects</a></li><li><a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a></li></ul></div>
+    <div class="footer-col"><h4>Projects</h4><ul><li><a href="projects.html">Automotive &amp; EV</a></li><li><a href="projects.html">Semiconductor</a></li><li><a href="projects.html">Pharma</a></li><li><a href="projects.html">Oil &amp; Gas</a></li><li><a href="projects.html">Data Centres</a></li><li><a href="projects.html">Social Infrastructure</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#chairman">Chairman's Note</a></li><li><a href="about.html#team">Leadership</a></li><li><a href="mission-vision.html">Certifications</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Partner With Us</a></li><li><a href="contact.html">Supplier Registration</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Metal Scope India - A Royal Fab Group Company - CIN V28190TN1984PLC011023</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookies</a><a href="#">Website Credits</a><a href="#">Sitemap</a></div></div>
+</div></footer>
+
+<div class="sticky-cta">
+  <a href="contact.html#quote"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="sticky-label">Request a Quote</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg><span class="sticky-label">Contact Our Team</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="sticky-label">Download Brochure</span></a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

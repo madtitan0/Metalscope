@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>High-Rise Structural Steel Engineering & Fabrication | MetalScope</title>
+<meta name="description" content="MetalScope India specializes in high-rise structural steel engineering, fabrication and erection — tubular forms, diagrids, megastructures and composite steel solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ── PAGE HERO ─────────────────────────────────────── */
+  .page-hero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 80px;
+    overflow: hidden;
+    background: var(--black);
+  }
+  .page-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+  }
+  .page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--black) 30%, rgba(10,10,20,0.4) 100%);
+  }
+  .page-hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  .page-hero-tag {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--red);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .page-hero-tag::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--red);
+    flex-shrink: 0;
+  }
+  .page-hero h1 {
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .page-hero-sub {
+    color: rgba(255,255,255,0.65);
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    font-weight: 400;
+    max-width: 560px;
+  }
+
+  /* ── INTRO SECTION ─────────────────────────────────── */
+  .intro-section {
+    background: var(--white);
+  }
+  .intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+  .intro-grid p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+  .intro-grid p:last-child { margin-bottom: 0; }
+  .intro-image {
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+  }
+  .intro-image img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+  }
+  .intro-image-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: var(--red);
+    color: var(--white);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 16px;
+  }
+
+  /* ── ADVANTAGES ─────────────────────────────────────── */
+  .advantages-section {
+    background: var(--surface-2);
+  }
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .adv-group {
+    background: var(--white);
+    border-radius: 4px;
+    padding: 32px;
+    border-top: 3px solid var(--red);
+  }
+  .adv-group-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--navy);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .adv-group-title svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--red);
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+  }
+  .advantage-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 14px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .advantage-item:last-child { margin-bottom: 0; }
+  .advantage-item::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--red);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  /* ── CTA STRIP ─────────────────────────────────────── */
+  .cta-strip {
+    background: var(--navy);
+    text-align: center;
+    padding: 80px 24px;
+  }
+  .cta-strip .section-tag {
+    color: rgba(255,255,255,0.5);
+    justify-content: center;
+  }
+  .cta-strip .section-tag::before {
+    background: rgba(255,255,255,0.3);
+  }
+  .cta-strip h2 {
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+  .cta-strip p {
+    color: rgba(255,255,255,0.6);
+    max-width: 520px;
+    margin: 0 auto 36px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .cta-strip-btns {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ── SECTION HEADING ───────────────────────────────── */
+  .section-heading {
+    margin-bottom: 48px;
+  }
+  .section-heading h2 { margin-bottom: 12px; }
+  .section-heading p {
+    color: var(--text-muted);
+    max-width: 640px;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+  .accent-red { color: var(--red); }
+
+  /* ── SECTION PAD ───────────────────────────────────── */
+  .section-pad { padding: 96px 0; }
+
+  @media (max-width: 900px) {
+    .intro-grid { grid-template-columns: 1fr; gap: 40px; }
+    .advantages-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .advantages-grid { grid-template-columns: 1fr; }
+    .page-hero { min-height: 52vh; padding-bottom: 60px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════ NAVBAR ═══════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-mark">M</div>
+      <div class="nav-logo-text">
+        <span>MetalScope</span>
+        <span>India · Since 1984</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+      <li class="nav-item">
+        <a href="about.html" class="nav-link">About Us <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown">
+          <a href="about.html">Who We Are</a>
+          <a href="mission-vision.html">Mission &amp; Vision</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="verticals.html" class="nav-link active">Business Vertical <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a>
+        <div class="nav-dropdown">
+          <a href="peb.html">Pre-Engineered Buildings</a>
+          <a href="structural-steel.html">Structural Steel</a>
+          <a href="bridges.html">Bridges &amp; Infrastructure</a>
+          <a href="railcar.html">Railcar &amp; Rolling Stock</a>
+          <a href="steel-doors.html">Steel Doors</a>
+          <a href="epc.html">EPC Projects</a>
+          <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+        </div>
+      </li>
+      <li class="nav-item"><a href="projects.html" class="nav-link">Projects</a></li>
+      <li class="nav-item"><a href="excellence.html" class="nav-link">Excellence</a></li>
+      <li class="nav-item"><a href="media.html" class="nav-link">Media</a></li>
+      <li class="nav-item"><a href="contact.html" class="nav-link">Contact Us</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="nav-login">Login</a>
+      <a href="contact.html#quote" class="btn btn-red nav-cta btn-arrow">Get a Quote</a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="nav-mobile-overlay" id="navMobileOverlay">
+  <button id="navMobileClose" style="position:absolute;top:24px;right:24px;width:40px;height:40px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/></svg>
+  </button>
+  <ul>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home</a></li>
+    <li class="mobile-nav-item">
+      <button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">
+        About Us <span class="mobile-caret" style="transition:transform 0.3s;">▾</span>
+      </button>
+      <div class="mobile-sub-links">
+        <a href="about.html">Who We Are</a>
+        <a href="mission-vision.html">Mission &amp; Vision</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item">
+      <button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">
+        Business Vertical <span class="mobile-caret" style="transition:transform 0.3s;">▾</span>
+      </button>
+      <div class="mobile-sub-links">
+        <a href="peb.html">Pre-Engineered Buildings</a>
+        <a href="structural-steel.html">Structural Steel</a>
+        <a href="bridges.html">Bridges &amp; Infrastructure</a>
+        <a href="railcar.html">Railcar &amp; Rolling Stock</a>
+        <a href="steel-doors.html">Steel Doors</a>
+        <a href="epc.html">EPC Projects</a>
+        <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="projects.html">Projects</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="excellence.html">Excellence</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="media.html">Media</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="contact.html#quote" class="btn btn-red" style="margin-top:32px;align-self:flex-start;">Get a Quote →</a>
+</div>
+
+<!-- ═══════════ PAGE HERO ═══════════ -->
+<section class="page-hero">
+  <img class="page-hero-bg" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80" alt="High-rise structural steel construction" loading="eager">
+  <div class="page-hero-overlay"></div>
+  <div class="container page-hero-content">
+    <div class="page-hero-tag">Business Vertical / MetalScope India</div>
+    <h1 class="display-lg">STRUCTURAL <span style="color:var(--red);">STEEL</span></h1>
+    <p class="page-hero-sub">High-Rise Structural Steel Engineering &amp; Fabrication</p>
+  </div>
+</section>
+
+<!-- ═══════════ INTRODUCTION ═══════════ -->
+<section class="intro-section section-pad">
+  <div class="container">
+    <div class="intro-grid">
+      <div>
+        <div class="section-tag reveal">Business Vertical / Structural Steel</div>
+        <h2 class="display-md reveal" style="margin-bottom:32px;">ENGINEERING THE <span class="accent-red">SKYLINE</span></h2>
+        <p class="reveal">Modern high-rise construction demands structural systems that combine extraordinary load-bearing capacity with architectural flexibility. Steel has emerged as the material of choice for tall buildings, offering unmatched strength-to-weight ratios and the ability to span vast distances without intermediate supports — enabling open, functional floor plans that concrete structures simply cannot achieve.</p>
+        <p class="reveal">MetalScope India specializes in the complete lifecycle of high-rise structural steel — from concept design and detailed engineering through precision fabrication and final site erection. Our in-house engineering team works with international design codes including IS 800, AISC 360, and Eurocode 3, ensuring every structure is compliant, optimized, and fit for purpose from day one.</p>
+        <p class="reveal">We have deep expertise in advanced structural typologies including tubular forms, outrigger and belt-truss systems, diagrid frames, megastructures, and composite steel-concrete floor systems. These solutions allow architects and developers to push the boundaries of height, form, and functionality while maintaining strict safety margins.</p>
+        <p class="reveal">Multi-storey steel framing systems are fabricated in our controlled factory environment in Pondicherry, where precision cutting, drilling, and welding are performed under rigorous quality protocols. Each component is pre-assembled, inspected, and dispatched as a coordinated kit — dramatically reducing on-site complexity and construction duration.</p>
+      </div>
+      <div class="intro-image reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Structural steel high-rise frame under construction">
+        <div class="intro-image-badge">Structural Steel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ADVANTAGES ═══════════ -->
+<section class="advantages-section section-pad">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="section-tag">Why Choose Structural Steel</div>
+      <h2 class="display-md">KEY <span class="accent-red">ADVANTAGES</span></h2>
+      <p>Steel's inherent properties and MetalScope's fabrication expertise deliver measurable advantages across every dimension of a high-rise project.</p>
+    </div>
+    <div class="advantages-grid">
+
+      <div class="adv-group reveal reveal-delay-1">
+        <div class="adv-group-title">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          Structural Strength &amp; Performance
+        </div>
+        <div class="advantage-item">Higher tensile strength compared to conventional building materials, enabling taller and more slender structures.</div>
+        <div class="advantage-item">Consistent and predictable material properties — no batch-to-batch variation, ensuring design assumptions are always met.</div>
+        <div class="advantage-item">Excellent ductility and energy absorption, providing superior seismic performance in earthquake-prone zones.</div>
+        <div class="advantage-item">Engineered connection systems — bolted, welded, or hybrid — that provide moment resistance and frame stability at every joint.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-2">
+        <div class="adv-group-title">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+          Space Optimization
+        </div>
+        <div class="advantage-item">Slim column sections and deep beam profiles maximize usable floor area — typically 5–8% more net leasable area versus equivalent concrete frames.</div>
+        <div class="advantage-item">Long-span capability of 18–40 m eliminates interior columns, creating flexible open-plan office, retail, and hospitality spaces.</div>
+        <div class="advantage-item">Reduced structural depth per floor allows additional storeys within the same overall building height permitted by local regulations.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-3">
+        <div class="adv-group-title">
+          <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+          Lightweight Construction
+        </div>
+        <div class="advantage-item">Steel frames weigh approximately 30–40% less than equivalent reinforced concrete structures, reducing foundation loads and associated costs.</div>
+        <div class="advantage-item">Lighter superstructure enables more economical pile or raft foundations, particularly advantageous on constrained urban sites.</div>
+        <div class="advantage-item">Lower dead loads translate directly into reduced material quantities for slabs, columns, and foundations throughout the entire structure.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-1">
+        <div class="adv-group-title">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          Long-Span Capability
+        </div>
+        <div class="advantage-item">Castellated and cellular beams achieve spans of 20–40 m with efficient use of material, reducing total steel tonnage while maintaining structural integrity.</div>
+        <div class="advantage-item">Composite steel-concrete deck systems combine the tensile strength of steel with the compressive strength of concrete for optimized structural performance across large floor plates.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-2">
+        <div class="adv-group-title">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Faster Construction
+        </div>
+        <div class="advantage-item">Factory fabrication in parallel with site groundworks compresses the overall construction programme by 25–40% versus conventional build methods.</div>
+        <div class="advantage-item">Steel frames are erected rapidly using cranes — typically 2–3 floors per week on high-rise projects — far outpacing in-situ concrete pour and cure cycles.</div>
+        <div class="advantage-item">No wet trades required for the primary structure, meaning follow-on fit-out activities can begin on lower floors while upper floors are still being erected.</div>
+        <div class="advantage-item">Pre-engineered connection systems with shop-drilled holes eliminate on-site cutting and adjustment, reducing skilled labour requirements and rework.</div>
+      </div>
+
+      <div class="adv-group reveal reveal-delay-3">
+        <div class="adv-group-title">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Site &amp; Safety Benefits
+        </div>
+        <div class="advantage-item">Reduced on-site formwork and temporary works lower site clutter, improving worker safety and site logistics — critical on constrained urban plots.</div>
+        <div class="advantage-item">Steel is 100% recyclable at end of life. A structural steel frame retains 95%+ of its embodied value and can be fully disassembled and reused or recycled.</div>
+        <div class="advantage-item">Prefabricated assemblies reduce dependence on large on-site labour forces, mitigating risks of skilled labour shortages.</div>
+        <div class="advantage-item">Factory quality control under IS 2062, IS 800 and third-party inspection eliminates field defects and ensures every component meets design specification before it leaves the plant.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA STRIP ═══════════ -->
+<section class="cta-strip reveal">
+  <div class="section-tag" style="justify-content:center;color:rgba(255,255,255,0.5);">
+    <span style="display:inline-block;width:28px;height:2px;background:rgba(255,255,255,0.3);"></span>
+    Start Your Project
+  </div>
+  <h2 class="display-md" style="color:var(--white);margin-bottom:12px;">LET'S BUILD THE<br><span style="color:var(--red);">FUTURE TOGETHER</span></h2>
+  <p>From concept engineering to final bolt-up — MetalScope delivers high-rise structural steel with precision, speed, and absolute accountability. Share your requirements and our team will respond within 24 hours.</p>
+  <div class="cta-strip-btns">
+    <a href="contact.html#quote" class="btn btn-red btn-arrow">Request a Quote</a>
+    <a href="contact.html" class="btn btn-outline-white">Contact Our Team</a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="site-footer"><div class="container">
+  <div class="footer-main">
+    <div class="footer-brand"><div class="footer-logo"><div class="footer-logo-mark">M</div><div class="footer-logo-text"><span>MetalScope</span><span>India / Since 1984</span></div></div><p class="footer-brand-desc">A Royal Fab Group company. Engineering, fabricating, and erecting India's most demanding structural steel projects from our facilities in Pondicherry and Tamil Nadu.</p><div class="footer-address"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Plot 14, Industrial Estate, Mettupalayam, Pondicherry — 605008, India</span><span><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg>+91 413 224 8800</span><span><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>projects@metalscopeindia.com</span></div><div class="footer-socials"><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--black)"/></svg></a></div></div>
+    <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="verticals.html">Business Vertical</a></li><li><a href="projects.html">Projects</a></li><li><a href="excellence.html">Excellence</a></li><li><a href="media.html">Media</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+    <div class="footer-col"><h4>Verticals</h4><ul><li><a href="peb.html">Pre-Engineered Buildings</a></li><li><a href="structural-steel.html">Structural Steel</a></li><li><a href="bridges.html">Bridges &amp; Infra</a></li><li><a href="railcar.html">Rail Coach</a></li><li><a href="steel-doors.html">Steel Doors</a></li><li><a href="epc.html">EPC Projects</a></li><li><a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a></li></ul></div>
+    <div class="footer-col"><h4>Projects</h4><ul><li><a href="projects.html">Automotive &amp; EV</a></li><li><a href="projects.html">Semiconductor</a></li><li><a href="projects.html">Pharma</a></li><li><a href="projects.html">Oil &amp; Gas</a></li><li><a href="projects.html">Data Centres</a></li><li><a href="projects.html">Social Infrastructure</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="about.html#chairman">Chairman's Note</a></li><li><a href="about.html#team">Leadership</a></li><li><a href="mission-vision.html">Certifications</a></li><li><a href="contact.html">Careers</a></li><li><a href="contact.html">Partner With Us</a></li><li><a href="contact.html">Supplier Registration</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Metal Scope India - A Royal Fab Group Company - CIN V28190TN1984PLC011023</p><div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cookies</a><a href="#">Website Credits</a><a href="#">Sitemap</a></div></div>
+</div></footer>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta">
+  <a href="contact.html#quote"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg><span class="sticky-label">Request a Quote</span></a>
+  <a href="contact.html"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.73 17h.27"/></svg><span class="sticky-label">Contact Our Team</span></a>
+  <a href="#"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span class="sticky-label">Download Brochure</span></a>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
