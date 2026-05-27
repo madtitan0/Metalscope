@@ -232,7 +232,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .nav-link:hover { color: var(--red); }
 .nav-link:hover::after, .nav-link.active::after { transform: scaleX(1); transform-origin: left; }
-.nav-link.active { color: var(--red); }
+.nav-link.active { color: var(--navy); }
+.nav-link.active::after { background: var(--navy); }
 
 .nav-caret {
   width: 14px;
@@ -279,7 +280,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: background 0.2s, color 0.2s, padding-left 0.2s;
 }
 .nav-dropdown a:last-child { border-bottom: none; }
-.nav-dropdown a:hover { background: var(--surface); color: var(--red); padding-left: 28px; }
+.nav-dropdown a:hover { background: var(--surface); color: var(--navy); padding-left: 28px; }
 
 .nav-actions { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
 .nav-login {
@@ -812,7 +813,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   left: calc(100% / 12);
   right: calc(100% / 12);
   height: 1px;
-  background: linear-gradient(90deg, var(--red), rgba(200,16,46,0.2));
+  background: linear-gradient(90deg, var(--red), var(--navy));
   z-index: 0;
 }
 .wow-step {
@@ -839,9 +840,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .wow-step:hover .wow-step-icon {
   border-color: var(--red);
-  background: #1a0407;
-  box-shadow: 0 0 0 8px rgba(200,16,46,0.08), 0 0 24px rgba(200,16,46,0.15);
+  background: rgba(200,16,46,0.06);
+  box-shadow: 0 0 0 6px rgba(200,16,46,0.08);
 }
+.wow-step:nth-child(even) .wow-step-icon {
+  border-color: rgba(27,127,193,0.45);
+}
+.wow-step:nth-child(even):hover .wow-step-icon {
+  border-color: var(--navy);
+  background: rgba(27,127,193,0.06);
+  box-shadow: 0 0 0 6px rgba(27,127,193,0.08);
+}
+.wow-step:nth-child(even) .wow-step-icon svg { stroke: var(--navy); }
 .wow-step-icon svg {
   width: 32px;
   height: 32px;
@@ -864,6 +874,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
 }
+.wow-step:nth-child(even) .wow-step-num { background: var(--navy); }
 .wow-step h4 {
   font-family: var(--font-display);
   font-size: 0.85rem;
@@ -882,8 +893,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .wow-relay {
   margin-top: 48px;
   padding: 24px 32px;
-  background: rgba(255,255,255,0.04);
-  border-left: 3px solid rgba(200,16,46,0.5);
+  background: rgba(27,127,193,0.05);
+  border-left: 3px solid var(--navy);
   font-size: 1rem;
   color: rgba(255,255,255,0.7);
   font-style: italic;
@@ -1127,23 +1138,35 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   height: auto;
   object-fit: contain;
   filter: grayscale(1) opacity(0.6);
-  transition: filter 0.3s;
+  transition: filter 0.35s, transform 0.35s var(--ease-out);
 }
-.client-logo-card:hover img { filter: grayscale(0) opacity(1); }
+.client-logo-card:hover img { filter: grayscale(0) opacity(1); transform: scale(1.18); }
 .client-logo-card .client-name-badge {
   display: none;
   font-family: var(--font-display);
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text);
   text-align: center;
   line-height: 1.2;
-  max-width: 80px;
+  max-width: 86px;
+  padding: 6px 10px;
+  border-radius: 3px;
+  border: 1.5px solid var(--border);
+  background: var(--white);
 }
 .client-logo-card.name-only .client-name-badge { display: block; }
 .client-logo-card.name-only img { display: none; }
+.client-logo-card.name-only:nth-child(even) .client-name-badge {
+  border-color: rgba(27,127,193,0.35);
+  color: var(--navy);
+}
+.client-logo-card.name-only:nth-child(odd) .client-name-badge {
+  border-color: rgba(200,16,46,0.3);
+  color: var(--red-dark);
+}
 @media (max-width: 1024px) { .client-logos-grid { grid-template-columns: repeat(6, 1fr); } }
 @media (max-width: 640px) { .client-logos-grid { grid-template-columns: repeat(4, 1fr); } .client-logo-card { height: 72px; } }
 @media (max-width: 420px) { .client-logos-grid { grid-template-columns: repeat(3, 1fr); } }
@@ -1177,6 +1200,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transition: border-color 0.3s, transform 0.3s;
 }
 .video-card:hover { border-color: rgba(200,16,46,0.4); transform: translateY(-4px); }
+.video-card:nth-child(3n) { border-color: rgba(27,127,193,0.1); }
+.video-card:nth-child(3n):hover { border-color: rgba(27,127,193,0.45); }
 .video-thumb {
   position: relative;
   aspect-ratio: 16/9;
@@ -1210,6 +1235,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   transform: scale(1.1);
   box-shadow: 0 0 0 12px rgba(200,16,46,0.2);
 }
+.video-card:nth-child(3n) .video-play-circle { background: var(--navy); }
+.video-card:nth-child(3n):hover .video-play-circle { box-shadow: 0 0 0 12px rgba(27,127,193,0.2); }
 .video-play-circle svg {
   width: 20px;
   height: 20px;
@@ -1288,6 +1315,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   background: rgba(200,16,46,0.04);
   transform: translateY(-3px);
 }
+.cert-card:nth-child(even):hover {
+  border-color: rgba(27,127,193,0.45);
+  background: rgba(27,127,193,0.05);
+}
 .cert-icon {
   width: 40px;
   height: 40px;
@@ -1299,6 +1330,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: center;
 }
 .cert-icon svg { width: 22px; height: 22px; stroke: var(--red); fill: none; stroke-width: 1.5; }
+.cert-card:nth-child(even) .cert-icon { background: rgba(27,127,193,0.15); }
+.cert-card:nth-child(even) .cert-icon svg { stroke: var(--navy); }
 .cert-card h3 {
   font-family: var(--font-display);
   font-size: 1rem;
@@ -1411,7 +1444,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-num);
   font-size: 3rem;
   font-weight: 800;
-  color: rgba(200,16,46,0.12);
+  color: var(--navy);
   line-height: 1;
   margin-bottom: 6px;
   letter-spacing: -0.02em;
@@ -1507,7 +1540,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--red);
+  color: var(--navy);
   margin-bottom: 8px;
 }
 .lead-form-title {
@@ -1561,8 +1594,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--red);
-  background: rgba(200,16,46,0.04);
+  border-color: var(--navy);
+  background: rgba(27,127,193,0.05);
 }
 .form-submit { width: 100%; margin-top: 4px; justify-content: center; padding: 16px; font-size: 0.9rem; }
 @media (max-width: 900px) {
