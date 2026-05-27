@@ -840,16 +840,16 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .wow-step:hover .wow-step-icon {
   border-color: var(--red);
-  background: rgba(200,16,46,0.08);
-  box-shadow: 0 0 0 6px var(--black), 0 0 0 9px rgba(200,16,46,0.35);
+  background: var(--black-mid);
+  box-shadow: 0 0 0 6px var(--black), 0 0 0 9px rgba(200,16,46,0.4);
 }
 .wow-step:nth-child(even) .wow-step-icon {
   border-color: rgba(27,127,193,0.45);
 }
 .wow-step:nth-child(even):hover .wow-step-icon {
   border-color: var(--navy);
-  background: rgba(27,127,193,0.08);
-  box-shadow: 0 0 0 6px var(--black), 0 0 0 9px rgba(27,127,193,0.35);
+  background: var(--black-mid);
+  box-shadow: 0 0 0 6px var(--black), 0 0 0 9px rgba(27,127,193,0.4);
 }
 .wow-step:nth-child(even) .wow-step-icon svg { stroke: var(--navy); }
 .wow-step-icon svg {
