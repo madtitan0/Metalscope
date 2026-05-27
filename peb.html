@@ -9,6 +9,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Barlow+Condensed:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+/* ── PEB APPLICATIONS BENTO GRID ── */
+.peb-apps-bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:3px;background:var(--border);}
+.peb-app-card{position:relative;overflow:hidden;cursor:default;}
+.peb-app-card.wide{grid-column:span 2;}
+.peb-app-card.tall{grid-row:span 2;}
+.peb-app-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.25,.46,.45,.94);}
+.peb-app-card:hover img{transform:scale(1.08);}
+.peb-app-card-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(10,10,20,.88) 0%,rgba(10,10,20,.15) 55%,transparent 100%);transition:background .4s;}
+.peb-app-card:hover .peb-app-card-overlay{background:linear-gradient(0deg,rgba(10,10,20,.95) 0%,rgba(10,10,20,.4) 70%,rgba(10,10,20,.1) 100%);}
+.peb-app-card-body{position:absolute;bottom:0;left:0;right:0;padding:16px 18px;transition:transform .35s cubic-bezier(.25,.46,.45,.94);}
+.peb-app-card:hover .peb-app-card-body{transform:translateY(-4px);}
+.peb-app-card-accent{width:32px;height:3px;background:var(--red);margin-bottom:8px;transform:scaleX(0);transform-origin:left;transition:transform .35s .1s cubic-bezier(.25,.46,.45,.94);}
+.peb-app-card:hover .peb-app-card-accent{transform:scaleX(1);}
+.peb-app-card-label{font-family:var(--font-display);font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:#fff;line-height:1.2;}
+.peb-app-card.wide .peb-app-card-label,.peb-app-card.tall .peb-app-card-label{font-size:18px;}
+.peb-app-card-desc{font-family:var(--font-body);font-size:12px;color:rgba(255,255,255,.65);line-height:1.5;margin-top:5px;max-height:0;overflow:hidden;transition:max-height .4s .05s cubic-bezier(.25,.46,.45,.94);}
+.peb-app-card:hover .peb-app-card-desc{max-height:60px;}
+@media(max-width:768px){.peb-apps-bento{grid-template-columns:1fr 1fr;grid-auto-rows:160px;}.peb-app-card.wide{grid-column:span 2;}.peb-app-card.tall{grid-row:span 2;}}
+@media(max-width:480px){.peb-apps-bento{grid-template-columns:1fr 1fr;grid-auto-rows:140px;}}
+</style>
 </head>
 <body>
 
@@ -127,32 +148,103 @@
 </section>
 
 <!-- APPLICATIONS -->
-<section class="applications-section section-pad">
+<section class="applications-section section-pad" style="background:var(--black);">
   <div class="container">
-    <div class="section-heading reveal">
-      <div class="section-tag">Where PEB Excels</div>
-      <h2 class="display-md">APPLICATIONS</h2>
-      <p>From factories to stadiums — PEB structures deliver across diverse sectors.</p>
+    <div class="section-heading reveal" style="text-align:center;">
+      <div class="section-tag" style="justify-content:center;">Where PEB Excels</div>
+      <h2 class="display-md" style="color:var(--white);">PEB <span style="color:var(--red);">APPLICATIONS</span></h2>
+      <p style="color:rgba(255,255,255,.55);max-width:520px;margin:0 auto;">From automotive gigafactories to airport terminals — hover any application to explore MetalScope's scope.</p>
     </div>
-    <div class="apps-grid">
-      <div class="app-item reveal"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg><span>Factories</span></div>
-      <div class="app-item reveal reveal-delay-1"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Workshops</span></div>
-      <div class="app-item reveal reveal-delay-2"><svg viewBox="0 0 24 24"><path d="M5 8h14M5 8a2 2 0 1 0 0-4h14a2 2 0 1 0 0 4M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8"/></svg><span>Warehouses</span></div>
-      <div class="app-item reveal reveal-delay-3"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Railway Stations</span></div>
-      <div class="app-item reveal"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg><span>Showrooms</span></div>
-      <div class="app-item reveal reveal-delay-1"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/></svg><span>Supermarkets</span></div>
-      <div class="app-item reveal reveal-delay-2"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l.79-.79a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16z"/></svg><span>Airport Terminals</span></div>
-      <div class="app-item reveal reveal-delay-3"><svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5a2 2 0 0 1-2-2V9m6 5h10a2 2 0 0 0 2-2V9m0 0H3"/></svg><span>Aircraft Hangers</span></div>
-      <div class="app-item reveal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><span>Petrol Pumps</span></div>
-      <div class="app-item reveal reveal-delay-1"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg><span>Schools</span></div>
-      <div class="app-item reveal reveal-delay-2"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg><span>Sports Complexes</span></div>
-      <div class="app-item reveal reveal-delay-3"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg><span>Sugar Mills</span></div>
-      <div class="app-item reveal"><svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg><span>Power Plants</span></div>
-      <div class="app-item reveal reveal-delay-1"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span>Cement Plants</span></div>
-      <div class="app-item reveal reveal-delay-2"><svg viewBox="0 0 24 24"><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/><path d="M7 10.5S8.5 8 12 8s5 2.5 5 2.5"/></svg><span>Poultry Farms</span></div>
-      <div class="app-item reveal reveal-delay-3"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/></svg><span>Convention Centers</span></div>
-      <div class="app-item reveal"><svg viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/></svg><span>Auditoriums</span></div>
+  </div>
+  <div class="peb-apps-bento reveal" style="margin-top:40px;">
+
+    <!-- Row 1 -->
+    <div class="peb-app-card wide tall">
+      <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900&q=80" alt="Factory">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Factories &amp; Assembly Plants</div>
+        <div class="peb-app-card-desc">90m clear span capacity — ideal for automotive, electronics, and pharma manufacturing with zero internal columns.</div>
+      </div>
     </div>
+    <div class="peb-app-card">
+      <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?w=600&q=80" alt="Workshops">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Workshops</div>
+        <div class="peb-app-card-desc">Heavy-duty bays with crane provisions up to 50T capacity.</div>
+      </div>
+    </div>
+    <div class="peb-app-card">
+      <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80" alt="Aircraft Hangars">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Aircraft Hangars</div>
+        <div class="peb-app-card-desc">Wide-span structures meeting DGCA and AAI specifications.</div>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="peb-app-card wide">
+      <img src="https://images.unsplash.com/photo-1601598851547-4302969d0614?w=800&q=80" alt="Warehouses">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Warehouses &amp; Logistics Hubs</div>
+        <div class="peb-app-card-desc">Multi-bay distribution centres with dock levellers, mezzanine floors, and cold storage provisions.</div>
+      </div>
+    </div>
+    <div class="peb-app-card">
+      <img src="https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&q=80" alt="Railway Stations">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Railway Stations</div>
+        <div class="peb-app-card-desc">RDSO-approved structures for platform canopies and concourse roofs.</div>
+      </div>
+    </div>
+    <div class="peb-app-card">
+      <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80" alt="Power Plants">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Power &amp; Energy Plants</div>
+        <div class="peb-app-card-desc">Turbine halls, switch-gear buildings, and solar module plants.</div>
+      </div>
+    </div>
+
+    <!-- Row 3 -->
+    <div class="peb-app-card">
+      <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80" alt="Schools Hospitals">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Schools &amp; Hospitals</div>
+        <div class="peb-app-card-desc">Modular multi-storey institutional buildings.</div>
+      </div>
+    </div>
+    <div class="peb-app-card wide">
+      <img src="https://images.unsplash.com/photo-1580674285054-bed31e145f59?w=800&q=80" alt="Sports Complex">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Sports Complexes &amp; Auditoriums</div>
+        <div class="peb-app-card-desc">Long-span roof structures for stadiums, indoor arenas, and convention centres up to 120m span.</div>
+      </div>
+    </div>
+    <div class="peb-app-card">
+      <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Showrooms">
+      <div class="peb-app-card-overlay"></div>
+      <div class="peb-app-card-body">
+        <div class="peb-app-card-accent"></div>
+        <div class="peb-app-card-label">Showrooms &amp; Retail</div>
+        <div class="peb-app-card-desc">Architecturally finished facades with column-free interiors for automotive and retail brands.</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
