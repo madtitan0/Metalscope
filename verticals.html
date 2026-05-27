@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav id="navbar"><div class="container nav-inner">
-  <a href="index.html" class="nav-logo"><div class="nav-logo-mark">M</div><div class="nav-logo-text"><span>MetalScope</span><span>India · Since 1984</span></div></a>
+  <a href="index.html" class="nav-logo"><img src="logo/metalscope-logo.png" alt="MetalScope India" style="height:46px;width:auto;display:block;"></a>
   <ul class="nav-links">
     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
     <li class="nav-item"><a href="about.html" class="nav-link">About Us <span class="nav-caret"><svg viewBox="0 0 10 6"><polyline points="1,1 5,5 9,1"/></svg></span></a><div class="nav-dropdown"><a href="about.html">Who We Are</a><a href="mission-vision.html">Mission &amp; Vision</a></div></li>
@@ -22,8 +22,36 @@
   </ul>
   <div class="nav-actions"><a href="#" class="nav-login">Login</a><a href="contact.html#quote" class="btn btn-red nav-cta btn-arrow">Get a Quote</a><button class="nav-hamburger" id="navHamburger"><span></span><span></span><span></span></button></div>
 </div></nav>
-<div class="nav-mobile-overlay" id="navMobileOverlay"><button id="navMobileClose" style="position:absolute;top:24px;right:24px;width:40px;height:40px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/></svg></button><ul><li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home</a></li><li class="mobile-nav-item"><a class="mobile-nav-link" href="verticals.html">Business Vertical</a></li><li class="mobile-nav-item"><a class="mobile-nav-link" href="projects.html">Projects</a></li><li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li></ul></div>
-
+<div class="nav-mobile-overlay" id="navMobileOverlay">
+  <button id="navMobileClose" style="position:absolute;top:24px;right:24px;width:40px;height:40px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><line x1="2" y1="2" x2="14" y2="14"/><line x1="14" y1="2" x2="2" y2="14"/></svg></button>
+  <ul>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="index.html">Home</a></li>
+    <li class="mobile-nav-item">
+      <button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">About Us <span class="mobile-caret" style="transition:transform 0.3s;">&#x25BE;</span></button>
+      <div class="mobile-sub-links">
+        <a href="about.html">Who We Are</a>
+        <a href="mission-vision.html">Mission &amp; Vision</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item">
+      <button class="mobile-nav-link mobile-nav-toggle" style="background:none;border:none;width:100%;text-align:left;cursor:pointer;font:inherit;color:inherit;">Business Vertical <span class="mobile-caret" style="transition:transform 0.3s;">&#x25BE;</span></button>
+      <div class="mobile-sub-links">
+        <a href="peb.html">Pre-Engineered Buildings</a>
+        <a href="structural-steel.html">Structural Steel</a>
+        <a href="bridges.html">Bridges &amp; Infrastructure</a>
+        <a href="railcar.html">Railcar &amp; Rolling Stock</a>
+        <a href="steel-doors.html">Steel Doors</a>
+        <a href="epc.html">EPC Projects</a>
+        <a href="highrise-datacentres.html">High-Rise &amp; Data Centres</a>
+      </div>
+    </li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="projects.html">Projects</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="excellence.html">Excellence</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="media.html">Media</a></li>
+    <li class="mobile-nav-item"><a class="mobile-nav-link" href="contact.html">Contact Us</a></li>
+  </ul>
+  <a href="contact.html#quote" class="btn btn-red" style="margin-top:32px;align-self:flex-start;">Get a Quote &#x2192;</a>
+</div>
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Business Verticals</span></div>
@@ -38,6 +66,18 @@
     </div>
   </div>
 </section>
+
+<div class="twenty-years-band">
+  <div class="container">
+    <div class="twenty-years-inner">
+      <img src="logo/metalscope-20years.png" alt="20 Years of Excellence" class="twenty-years-logo">
+      <div class="twenty-years-text">
+        <span class="twenty-years-headline">20 Years of Cross-Industry Engineering Leadership</span>
+        <span class="twenty-years-sub">7 verticals. One integrated partner. Unmatched delivery track record.</span>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="section-pad" style="background:var(--white);">
   <div class="container">
@@ -121,7 +161,8 @@
 
 <footer class="site-footer"><div class="container">
   <div class="footer-main">
-    <div class="footer-brand"><div class="footer-logo"><div class="footer-logo-mark">M</div><div class="footer-logo-text"><span>MetalScope</span><span>India / Since 1984</span></div></div><p class="footer-brand-desc">A Royal Fab Group company. Engineering, fabricating, and erecting India's most demanding structural steel projects.</p><div class="footer-address"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Plot 14, Industrial Estate, Pondicherry — 605008</span></div><div class="footer-socials"><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a></div></div>
+    <div class="footer-brand"><div class="footer-logo"><img src="logo/metalscope-logo.png" alt="MetalScope India" style="height:48px;width:auto;display:block;filter:brightness(0) invert(1);">
+        <img src="logo/metalscope-20years.png" alt="20 Years of Excellence" style="height:40px;width:auto;display:block;margin-top:10px;filter:brightness(0) invert(1);opacity:0.85;"></div><p class="footer-brand-desc">A Royal Fab Group company. Engineering, fabricating, and erecting India's most demanding structural steel projects.</p><div class="footer-address"><span><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Plot 14, Industrial Estate, Pondicherry — 605008</span></div><div class="footer-socials"><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a><a href="#" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a></div></div>
     <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
     <div class="footer-col"><h4>Verticals</h4><ul><li><a href="peb.html">Pre-Engineered Buildings</a></li><li><a href="structural-steel.html">Structural Steel</a></li><li><a href="bridges.html">Bridges &amp; Infra</a></li><li><a href="railcar.html">Rail Coach</a></li><li><a href="steel-doors.html">Steel Doors</a></li></ul></div>
     <div class="footer-col"><h4>Projects</h4><ul><li><a href="projects.html">Automotive &amp; EV</a></li><li><a href="projects.html">Semiconductor</a></li><li><a href="projects.html">Pharma</a></li></ul></div>
