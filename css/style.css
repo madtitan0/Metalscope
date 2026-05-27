@@ -835,21 +835,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  transition: border-color 0.3s, background 0.3s;
+  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
   position: relative;
 }
 .wow-step:hover .wow-step-icon {
   border-color: var(--red);
-  background: rgba(200,16,46,0.06);
-  box-shadow: 0 0 0 6px rgba(200,16,46,0.08);
+  background: rgba(200,16,46,0.08);
+  box-shadow: 0 0 0 6px var(--black), 0 0 0 9px rgba(200,16,46,0.35);
 }
 .wow-step:nth-child(even) .wow-step-icon {
   border-color: rgba(27,127,193,0.45);
 }
 .wow-step:nth-child(even):hover .wow-step-icon {
   border-color: var(--navy);
-  background: rgba(27,127,193,0.06);
-  box-shadow: 0 0 0 6px rgba(27,127,193,0.08);
+  background: rgba(27,127,193,0.08);
+  box-shadow: 0 0 0 6px var(--black), 0 0 0 9px rgba(27,127,193,0.35);
 }
 .wow-step:nth-child(even) .wow-step-icon svg { stroke: var(--navy); }
 .wow-step-icon svg {
@@ -1224,7 +1224,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .video-play-circle {
   width: 56px;
   height: 56px;
-  background: var(--red);
+  background: var(--navy);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1233,10 +1233,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .video-card:hover .video-play-circle {
   transform: scale(1.1);
-  box-shadow: 0 0 0 12px rgba(200,16,46,0.2);
+  box-shadow: 0 0 0 12px rgba(27,127,193,0.2);
 }
-.video-card:nth-child(3n) .video-play-circle { background: var(--navy); }
-.video-card:nth-child(3n):hover .video-play-circle { box-shadow: 0 0 0 12px rgba(27,127,193,0.2); }
 .video-play-circle svg {
   width: 20px;
   height: 20px;
