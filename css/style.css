@@ -658,15 +658,15 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 12px;
 }
 .flip-front .hover-hint {
-  font-size: 0.7rem;
-  color: var(--text-muted);
+  font-size: 0.68rem;
+  color: #52C5E5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   gap: 6px;
-  position: absolute;
-  bottom: 24px;
+  margin-top: auto;
+  padding-top: 14px;
 }
 .flip-back {
   background: var(--navy);
@@ -827,7 +827,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 .wow-step:hover .wow-step-icon {
   border-color: var(--red);
-  background: rgba(200,16,46,0.1);
+  background: #1a0407;
+  box-shadow: 0 0 0 8px rgba(200,16,46,0.08), 0 0 24px rgba(200,16,46,0.15);
 }
 .wow-step-icon svg {
   width: 32px;
@@ -1296,33 +1297,90 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-self: start;
   margin-top: 8px;
 }
-.awards-grid {
+/* ── AWARDS TIMELINE ────────────────────────────────────────── */
+.awards-timeline {
+  position: relative;
+  padding: 32px 0 8px;
+  margin-top: 16px;
+}
+.awards-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--red) 0%, rgba(200,16,46,0.08) 100%);
+}
+.timeline-event {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  grid-template-columns: 1fr 64px 1fr;
+  gap: 0;
+  margin-bottom: 44px;
+  align-items: flex-start;
 }
-.award-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
+.timeline-event:last-child { margin-bottom: 0; }
+.timeline-event-content {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 4px;
-  padding: 24px;
-  transition: border-color 0.3s, background 0.3s;
+  padding: 22px 26px;
+  transition: border-color 0.3s, background 0.3s, transform 0.3s;
 }
-.award-card:hover {
+.timeline-event-content:hover {
   border-color: rgba(200,16,46,0.3);
-  background: rgba(200,16,46,0.03);
+  background: rgba(200,16,46,0.05);
+  transform: translateY(-3px);
 }
-.award-year {
+.timeline-event.align-right .timeline-event-content { text-align: right; }
+.timeline-event.align-left .timeline-event-content { text-align: left; }
+.timeline-spacer { }
+.timeline-center-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding-top: 6px;
+  z-index: 1;
+}
+.timeline-dot {
+  width: 18px;
+  height: 18px;
+  background: var(--red);
+  border-radius: 50%;
+  border: 3px solid var(--black-mid);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 4px rgba(200,16,46,0.2);
+  transition: box-shadow 0.3s;
+}
+.timeline-event:hover .timeline-dot {
+  box-shadow: 0 0 0 8px rgba(200,16,46,0.15), 0 0 20px rgba(200,16,46,0.3);
+}
+.timeline-year-pill {
   font-family: var(--font-num);
-  font-size: 2.5rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--red);
-  line-height: 1;
-  margin-bottom: 8px;
+  background: rgba(200,16,46,0.12);
+  border: 1px solid rgba(200,16,46,0.25);
+  padding: 2px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  letter-spacing: 0.06em;
 }
-.award-title {
+.timeline-award-year {
+  font-family: var(--font-num);
+  font-size: 3rem;
+  font-weight: 800;
+  color: rgba(200,16,46,0.12);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.timeline-award-title {
   font-family: var(--font-display);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
@@ -1330,10 +1388,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-bottom: 8px;
   line-height: 1.3;
 }
-.award-desc {
-  font-size: 0.72rem;
-  color: rgba(255,255,255,0.45);
+.timeline-award-desc {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.42);
   line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .awards-timeline::before { left: 16px; transform: none; }
+  .timeline-event {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+    margin-bottom: 32px;
+  }
+  .timeline-event .timeline-spacer { display: none; }
+  .timeline-event.align-right .timeline-event-content { text-align: left; grid-column: 2; grid-row: 1; }
+  .timeline-center-col { order: -1; padding-top: 4px; }
+  .timeline-year-pill { display: none; }
 }
 @media (max-width: 900px) {
   .certs-header, .awards-header { grid-template-columns: 1fr; }
@@ -1538,23 +1608,25 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 10px;
 }
 .social-icon {
-  width: 34px;
-  height: 34px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 4px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.25s, border-color 0.25s, transform 0.25s;
+  color: rgba(255,255,255,0.55);
 }
-.social-icon:hover {
-  background: var(--red);
-  border-color: var(--red);
-  transform: translateY(-3px);
-}
-.social-icon svg { width: 16px; height: 16px; fill: rgba(255,255,255,0.6); }
-.social-icon:hover svg { fill: var(--white); }
+.social-icon:hover { transform: translateY(-3px); color: var(--white); }
+.social-icon[aria-label="LinkedIn"]:hover  { background: #0077B5; border-color: #0077B5; }
+.social-icon[aria-label="Instagram"]:hover { background: #E4405F; border-color: #E4405F; }
+.social-icon[aria-label="Facebook"]:hover  { background: #1877F2; border-color: #1877F2; }
+.social-icon[aria-label="YouTube"]:hover   { background: #FF0000; border-color: #FF0000; }
+.social-icon[aria-label="Twitter"]:hover,
+.social-icon[aria-label="Twitter/X"]:hover { background: #111; border-color: #444; }
+.social-icon svg { width: 16px; height: 16px; fill: currentColor; stroke: none; display: block; }
 
 .footer-col h4 {
   font-family: var(--font-display);
